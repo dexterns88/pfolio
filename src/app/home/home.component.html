@@ -1,0 +1,14 @@
+
+<div class="content">
+
+  <div class="row">
+
+    <app-projects
+      class="projects"
+      *ngFor="let project of projects;trackBy: project?.title"
+      [project]="project">
+    </app-projects>
+
+  </div>
+
+</div>
