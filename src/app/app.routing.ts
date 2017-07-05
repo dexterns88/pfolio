@@ -5,8 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DefaultComponent } from './default/default.component';
-
-import { NavigationComponent } from './navigation/navigation.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   {
@@ -37,8 +36,15 @@ const appRoutes: Routes = [
     }
   },
   {
-    path: 'nav',
-    component: NavigationComponent
+    path: 'contact',
+    component: ContactComponent,
+    data: {
+      animation: {
+        value: 'contact'
+      },
+      type: 'main-nav',
+      navName: 'contact'
+    }
   },
   {
     path: '**',
