@@ -1,0 +1,13 @@
+
+<ul class="nav navbar-nav navbar-right">
+
+  <li *ngFor="let router of routers" routerLinkActive="active">
+    <a routerLink="/{{router.path}}">{{router.data.navName}}</a>
+  </li>
+
+  <!-- remove this after development -->
+  <li>
+    <a routerLink="/nijetu">nepostojeca</a>
+  </li>
+
+</ul>

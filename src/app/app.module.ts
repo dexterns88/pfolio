@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsService } from './services/projects.service';
 import { ProjectsComponent } from './projects/projects.component';
 import { DefaultComponent } from './default/default.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DefaultComponent } from './default/default.component';
     HomeComponent,
     AboutComponent,
     ProjectsComponent,
-    DefaultComponent
+    DefaultComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

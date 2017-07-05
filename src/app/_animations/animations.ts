@@ -1,4 +1,4 @@
-import { trigger, animate, style, group, animateChild, query, stagger, transition } from '@angular/animations';
+import { trigger, style, group, animateChild, query, stagger, transition } from '@angular/animations';
 
 export function routerAnimation() {
   return routeAnim();
@@ -14,18 +14,18 @@ function routeAnim() {
         top: 0,
         left: 0,
         right: 0
-      })),
+      }), {optional: true}),
 
       query(':leave', group([
         animateChild()
-      ])),
+      ]), {optional: true}),
 
       group([
         query(':enter', group([
           stagger(400, [
             animateChild()
           ])
-        ]))
+        ]), {optional: true})
       ])
     ])
   ]);

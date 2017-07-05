@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DefaultComponent } from './default/default.component';
 
+import { NavigationComponent } from './navigation/navigation.component';
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -18,7 +20,9 @@ const appRoutes: Routes = [
     data: {
       animation: {
         value: 'home'
-      }
+      },
+      type: 'main-nav',
+      navName: 'project'
     }
   },
   {
@@ -27,8 +31,14 @@ const appRoutes: Routes = [
     data: {
       animation: {
         value: 'about'
-      }
+      },
+      type: 'main-nav',
+      navName: 'about'
     }
+  },
+  {
+    path: 'nav',
+    component: NavigationComponent
   },
   {
     path: '**',
