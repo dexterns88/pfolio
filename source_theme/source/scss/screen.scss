@@ -41,6 +41,37 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
+/*
+| Sticked footer
+========================= */
+html,body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page,
+.footer-sticked {
+  display: table-row;
+  height: auto;
+}
+
+.footer-sticked {
+  height: 1px;
+}
+
+
 /*
 | Typography
 ========================= */
@@ -73,4 +104,22 @@ p {
   span.caption {
     display: block;
   }
+}
+
+/*
+| Image style
+*/
+.image-wrapper {
+  max-width: 200px;
+
+  &.floated-left {
+    float: left;
+    margin: 0 25px 15px 0;
+  }
+}
+
+.rounded-image {
+  border-radius: 100%;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 }

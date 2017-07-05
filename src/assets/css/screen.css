@@ -1,1 +1,124 @@
-:root{font-size:10px}*{box-sizing:border-box}body{margin:0;font-size:1.5rem;overflow-x:hidden;overflow-y:scroll}h1{font-size:3.2rem}h2{font-size:3.0rem}h3{font-size:2.8rem}h4{font-size:2.6rem}h5{font-size:2.4rem}p{font-size:1.4rem}.thumbnail span.caption{display:block}
+:root {
+  padding-bottom: 20px; }
+
+body {
+  padding-bottom: 20px; }
+  body:after {
+    color: white;
+    display: block;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+    bottom: 0;
+    height: 20px;
+    overflow: hidden; }
+    @media (min-width: 480px) {
+      body:after {
+        background: red;
+        content: 'XS'; } }
+    @media (min-width: 550px) {
+      body:after {
+        background: orange;
+        content: 'S'; } }
+    @media (min-width: 768px) {
+      body:after {
+        background: GOLD;
+        content: 'M'; } }
+    @media (min-width: 992px) {
+      body:after {
+        background: GREEN;
+        content: 'L'; } }
+    @media (min-width: 1200px) {
+      body:after {
+        background: BLUE;
+        content: 'XL'; } }
+    @media (min-width: 1400px) {
+      body:after {
+        background: PURPLE;
+        content: 'XXL'; } }
+    @media (min-width: 1600px) {
+      body:after {
+        background: INDIGO;
+        content: 'XXXL'; } }
+  body.adminimal-menu:after {
+    top: 29px; }
+
+:root {
+  font-size: 10px; }
+
+* {
+  box-sizing: border-box; }
+
+/*
+| Layout
+========================= */
+body {
+  margin: 0;
+  font-size: 1.5rem;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+/*
+| Sticked footer
+========================= */
+html, body {
+  height: 100%;
+  margin: 0; }
+
+body {
+  display: table;
+  height: 100%;
+  width: 100%; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.page,
+.footer-sticked {
+  display: table-row;
+  height: auto; }
+
+.footer-sticked {
+  height: 1px; }
+
+/*
+| Typography
+========================= */
+h1 {
+  font-size: 3.2rem; }
+
+h2 {
+  font-size: 3.0rem; }
+
+h3 {
+  font-size: 2.8rem; }
+
+h4 {
+  font-size: 2.6rem; }
+
+h5 {
+  font-size: 2.4rem; }
+
+p {
+  font-size: 1.4rem; }
+
+.thumbnail span.caption {
+  display: block; }
+
+/*
+| Image style
+*/
+.image-wrapper {
+  max-width: 200px; }
+  .image-wrapper.floated-left {
+    float: left;
+    margin: 0 25px 15px 0; }
+
+.rounded-image {
+  border-radius: 100%;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.6);
+  overflow: hidden; }
+
+/*# sourceMappingURL=screen.css.map */

@@ -8,6 +8,11 @@ import { AboutComponent } from './about/about.component';
 const appRoutes: Routes = [
   {
     path: '',
+    redirectTo: '/project',
+    pathMatch: 'full'
+  },
+  {
+    path: 'project',
     component: HomeComponent,
     data: {
       animation: {
