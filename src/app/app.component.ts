@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { routerAnimation } from './_animations/animations';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

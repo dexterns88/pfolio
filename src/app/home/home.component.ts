@@ -5,9 +5,10 @@ import { ProjectsService } from '../services/projects.service';
 import {query, stagger, animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  templateUrl: 'home.component.html',
+  styleUrls: ['home.component.css'],
   animations: [
     trigger('pageAnimation', [
 

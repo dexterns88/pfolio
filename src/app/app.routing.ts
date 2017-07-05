@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 // Import component for routing
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { DefaultComponent } from './default/default.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,15 @@ const appRoutes: Routes = [
     data: {
       animation: {
         value: 'about'
+      }
+    }
+  },
+  {
+    path: '**',
+    component: DefaultComponent,
+    data: {
+      animation: {
+        value: 'default'
       }
     }
   }

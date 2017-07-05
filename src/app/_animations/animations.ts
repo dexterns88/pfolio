@@ -7,7 +7,8 @@ export function routerAnimation() {
 function routeAnim() {
   return trigger('routerAnimations', [
 
-    transition('home => about, about => home', [
+    // router navigation is here global
+    transition('* => *', [
       query(':enter', style({
         position: 'absolute',
         top: 0,
