@@ -82,6 +82,10 @@ h1 {
   font-weight: 400;
   margin-bottom: 35px;
   margin-top: 0;
+
+  .panel-heading & {
+    margin-bottom: 0;
+  }
 }
 
 h2 {
@@ -118,6 +122,14 @@ header {
   app-root > .container {
     padding-top: 30px;
   }
+}
+
+.loading {
+  transition: opacity .8s ease-in-out;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 /*
