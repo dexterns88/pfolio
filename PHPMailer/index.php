@@ -23,7 +23,7 @@ $usersName = array_keys($users);
 // Check if HTTP_ORIGIN exist
 if (!array_key_exists('HTTP_ORIGIN', $_SERVER)) {
   header('HTTP/1.0 401 Unauthorized');
-  echo "Only rest api have acceess";
+  echo json_encode(array('error'=>'Only rest api have acceess'));
   exit;
 }
 
@@ -31,7 +31,7 @@ if (!array_key_exists('HTTP_ORIGIN', $_SERVER)) {
 if (!preg_match('/'.$origin.'/',$_SERVER['HTTP_ORIGIN'])) {
   $output = "You are not authorized to access this page: #i292ox2";
   header('HTTP/1.0 401 Unauthorized');
-  echo $output;
+  echo json_encode($output);
   exit;
 }
 
@@ -39,7 +39,7 @@ if (!preg_match('/'.$origin.'/',$_SERVER['HTTP_ORIGIN'])) {
 if( !isset($_SERVER['PHP_AUTH_USER'])) {
   $output = 'You are not authorized to access this page: #i292ox3';
   header('HTTP/1.0 401 Unauthorized');
-  echo $output;
+  echo json_encode($output);
   exit;
 }
 
