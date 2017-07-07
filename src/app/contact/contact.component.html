@@ -10,7 +10,7 @@
       </div>
       <div class="panel-body">
 
-        <form class="contact-form" (ngSubmit)="send()" #f="ngForm">
+        <form name="contact" class="contact-form" (ngSubmit)="contact.form.valid && send()" #contact="ngForm" novalidate>
 
           <div class="form-group">
             <label for="name" class="control-label">First name:</label>
@@ -22,15 +22,23 @@
             <input type="text" class="form-control" name="surname" id="surname" [(ngModel)]="model.surname" #surname="ngModel">
           </div>
 
-          <div class="form-group">
-            <label for="email" class="control-label">Email:</label>
-            <input type="email" class="form-control" name="email" id="email" [(ngModel)]="model.email" #email="ngModel">
+          <div class="form-group" [ngClass]="{'has-error': contact.submitted && !email.valid }">
+            <label for="email" class="control-label">Email: <span class="required">*</span></label>
+            <input type="email" class="form-control" name="email" id="email" [(ngModel)]="model.email" #email="ngModel" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+            <div class="help-block" *ngIf="contact.submitted && !email.valid || !email.untouched">
+              <div  *ngIf="email.errors && email.errors.required">
+                Email is required
+              </div>
+              <div  *ngIf="email.errors && email.errors.pattern">
+                Email is invalid
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="message" class="control-label">Message</label>
-            <textarea class="form-control" rows="3" id="message" name="message" [(ngModel)]="model.message" #message="ngModel"></textarea>
-            <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+          <div class="form-group" [ngClass]="{'has-error': contact.submitted && !message.valid }">
+            <label for="message" class="control-label">Message: <span class="required">*</span></label>
+            <textarea class="form-control" rows="3" id="message" name="message" [(ngModel)]="model.message" #message="ngModel" required></textarea>
+            <div *ngIf="contact.submitted && !message.valid" class="help-block">Message is required</div>
           </div>
 
           <div class="form-group">

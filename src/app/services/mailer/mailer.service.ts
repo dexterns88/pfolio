@@ -18,7 +18,8 @@ export class MailerService {
 
   private headAttach() {
     let headers = new Headers({
-      'Content-Type': 'application/x-www-form-urlencoded'
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': 'Basic YWRtaW46eHg='
     });
     return new RequestOptions({ headers: headers });
   }
