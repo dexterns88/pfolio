@@ -8,4 +8,8 @@ export class ProjectsService {
   getAll() {
     return this._groups;
   }
+
+  getItem(id: number) {
+    return this._groups[id];
+  }
 }

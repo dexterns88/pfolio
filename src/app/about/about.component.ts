@@ -5,12 +5,11 @@ import {query, stagger, animate, style, transition, trigger, group} from '@angul
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
   animations: [
     trigger('pageAnimation', [
 
       transition(':enter', [
-        query('.anim-segment', style({
+        query('.anim-segment, .page-title', style({
           opacity: 0
         })),
 
@@ -19,7 +18,7 @@ import {query, stagger, animate, style, transition, trigger, group} from '@angul
         })),
 
         group([
-          query('.anim-segment', [
+          query('.anim-segment, .page-title', [
             stagger(250, [
               animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
             ])
@@ -34,7 +33,7 @@ import {query, stagger, animate, style, transition, trigger, group} from '@angul
       ]),
       transition(':leave', [
         group([
-          query('.anim-segment', [
+          query('.anim-segment, .page-title', [
             stagger(150, [
               animate('550ms cubic-bezier(.35,0,.25,1)', style({
                 opacity: 0

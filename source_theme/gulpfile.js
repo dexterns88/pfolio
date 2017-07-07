@@ -18,6 +18,7 @@ var gulp = require('gulp'),
       postcss_font_awesome
     ],
     jsfiles = [
+      'node_modules/web-animations-js/web-animations.min.js',
       'source/js/app.js'
     ],
     scssfiles = [

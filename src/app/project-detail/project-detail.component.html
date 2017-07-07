@@ -1,0 +1,45 @@
+<section class="row project-detail">
+  <div class="col-sm-12">
+
+    <h1 class="project-title">
+      <a target="_blank" href="{{ project.link }}">
+        {{ project.title }}
+      </a>
+    </h1>
+
+    <div class="bs-callout bs-callout-info">
+
+      <div class="row">
+        <div *ngIf="project.images" class="col-sm-4">
+          <img class="media-object" src="/assets/images/projects/{{project.images[0]}}" alt="sea" />
+        </div>
+
+        <div class="col-sm-8">
+          {{ project.description }}
+        </div>
+      </div>
+    </div>
+
+    <p class="project-link">
+      <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+      <a target="_blank" href="{{ project.link }}">{{ project.link }}</a>
+    </p>
+
+    <div class="well technology">
+      <h2>Technology</h2>
+      <ul class="list-group">
+        <li *ngFor="let teach of project.teach" class="list-group-item">{{ teach }}</li>
+      </ul>
+    </div>
+
+    <div *ngIf="project.images && project.images.length > 1" class="well images">
+      <div class="row">
+        <div *ngFor="let image of project.images" class="col-sm-4">
+          <img src="/assets/images/projects/{{ image }}" alt="sss" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>

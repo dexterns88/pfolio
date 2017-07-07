@@ -10,7 +10,7 @@ header("Access-Control-Allow-Origin: *");
 $data = $_POST;
 
 $users = array(
-  'admin' => 'xx'
+  'admin' => 'Szz?.orJso23LssjIOI2.'
 );
 $origin = '192.168.1.102';
 //$origin = 'dex.loc';

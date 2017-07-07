@@ -37,9 +37,10 @@
 ========================= */
 body {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   overflow-x: hidden;
   overflow-y: scroll;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /*
@@ -76,7 +77,11 @@ img {
 | Typography
 ========================= */
 h1 {
-  font-size: 3.2rem;
+  font-family: 'Indie Flower', cursive;
+  font-size: 3.6rem;
+  font-weight: 400;
+  margin-bottom: 35px;
+  margin-top: 0;
 }
 
 h2 {
@@ -95,14 +100,23 @@ h5 {
   font-size: 2.4rem;
 }
 
-p {
-  font-size: 1.4rem;
-}
-
 .thumbnail {
 
   span.caption {
     display: block;
+  }
+}
+
+header {
+  .navbar {
+    margin-bottom: 0;
+  }
+}
+
+.page {
+
+  app-root > .container {
+    padding-top: 30px;
   }
 }
 
@@ -188,4 +202,17 @@ p {
 
 .contact-form {
   overflow: hidden;
+}
+
+// bootstrap extend
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+
+  &.bs-callout-info {
+    border-left-color: #1b809e;
+  }
 }

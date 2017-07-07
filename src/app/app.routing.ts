@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DefaultComponent } from './default/default.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -22,6 +23,15 @@ const appRoutes: Routes = [
       },
       type: 'main-nav',
       navName: 'project'
+    }
+  },
+  {
+    path: 'project/:id',
+    component: ProjectDetailComponent,
+    data: {
+      animation: {
+        value: 'project-detail'
+      }
     }
   },
   {

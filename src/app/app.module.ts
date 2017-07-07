@@ -19,6 +19,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { DefaultComponent } from './default/default.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ContactComponent } from './contact/contact.component';
     ProjectsComponent,
     DefaultComponent,
     NavigationComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,

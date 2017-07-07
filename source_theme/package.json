@@ -24,7 +24,8 @@
     "postcss-font-awesome": "^0.3.3",
     "postcss-inline-svg": "^3.0.0",
     "postcss-position": "^0.5.0",
-    "postcss-size": "^2.0.0"
+    "postcss-size": "^2.0.0",
+    "web-animations-js": "^2.2.5"
   },
   "scripts": {
     "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
