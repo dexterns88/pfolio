@@ -1,0 +1,1256 @@
+webpackJsonp([1],{
+
+/***/ "../../../../../src async recursive":
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = "../../../../../src async recursive";
+
+/***/ }),
+
+/***/ "../../../../../src/app/_animations/animations.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
+/* harmony export (immutable) */ __webpack_exports__["a"] = routerAnimation;
+
+function routerAnimation() {
+    return routeAnim();
+}
+function routeAnim() {
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["i" /* trigger */])('routerAnimations', [
+        // router navigation is here global
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* transition */])('* => *', [
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* query */])(':enter', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["h" /* style */])({
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0
+            }), { optional: true }),
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* query */])(':leave', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["n" /* group */])([
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["o" /* animateChild */])()
+            ]), { optional: true }),
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["n" /* group */])([
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* query */])(':enter', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["n" /* group */])([
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["l" /* stagger */])(400, [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["o" /* animateChild */])()
+                    ])
+                ]), { optional: true })
+            ])
+        ])
+    ]);
+}
+//# sourceMappingURL=animations.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/about/about.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content\">\n\n  <h1 class=\"page-title\">About me</h1>\n\n  <div class=\"row\">\n\n    <div class=\"col-sm-12\">\n      <div class=\"image-wrapper floated-left\">\n        <div class=\"rounded-image\">\n          <picture>\n            <!--<source media=\"(min-width: 465px)\" srcset=\"img_white_flower.jpg\">-->\n            <img src=\"assets/images/dexter.jpg\" alt=\"Dejan Dudukovic\"/>\n          </picture>\n        </div>\n      </div>\n\n      <div class=\"anim-segment\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor pharetra purus at gravida. Cras rhoncus vehicula convallis. Aliquam erat volutpat. Nulla risus justo, scelerisque non pellentesque sed, rutrum vel lectus. Ut imperdiet, tortor eget interdum fringilla, diam enim maximus nisl, in malesuada ex nunc ut nunc. Curabitur sed diam facilisis, fringilla felis a, venenatis libero. Mauris in tellus fermentum dui vehicula accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam facilisis eleifend nibh, tristique venenatis sapien volutpat at. Aliquam consectetur nunc ut elit feugiat lobortis. Sed porta augue eget justo scelerisque cursus. Praesent tempor molestie commodo. Aenean faucibus nec mauris in consequat. Donec venenatis nec neque eget dignissim.\n        </p>\n      </div>\n\n      <div class=\"anim-segment\">\n        <p>\n          Suspendisse eget augue tellus. Ut nunc diam, semper feugiat tellus at, pretium bibendum ex. Morbi sollicitudin purus lorem, id lobortis turpis scelerisque quis. Nunc ut massa nisi. Donec pellentesque pulvinar lectus facilisis scelerisque. Sed bibendum fermentum nisi, vitae volutpat tellus pellentesque sit amet. Pellentesque ut eros et turpis bibendum facilisis eget eget arcu. Praesent mattis lacus neque, et vestibulum mi iaculis quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id lorem fringilla, faucibus odio vitae, luctus augue. Nam blandit, neque vel bibendum ullamcorper, purus tortor elementum libero, id tristique orci nibh at tortor. Ut a neque risus. Cras quis tristique nisi, vitae porttitor sapien. Integer molestie ante risus, a elementum libero pellentesque sed.\n        </p>\n      </div>\n\n      <div class=\"anim-segment\">\n        <p>\n          Nunc placerat nisi nec molestie mollis. Donec interdum rutrum dui quis fringilla. Sed et nulla blandit nunc blandit facilisis sed vel felis. Fusce quis eleifend justo. Vivamus mauris ante, elementum ut suscipit nec, vehicula non purus. Phasellus aliquam tortor vel sem placerat interdum. Integer maximus felis non arcu scelerisque, eget finibus mi tempor. Ut nulla ex, efficitur eu sollicitudin in, consectetur sed dui. Maecenas vitae metus suscipit, lacinia orci et, hendrerit sem. Vestibulum iaculis facilisis nibh non cursus. Aenean viverra dolor felis, id finibus neque hendrerit non. Fusce eget odio ante. Sed nec ultrices lorem.\n        </p>\n      </div>\n    </div>\n\n  </div>\n\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/about/about.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var AboutComponent = (function () {
+    function AboutComponent() {
+        this.animatePage = true;
+    }
+    AboutComponent.prototype.ngOnInit = function () {
+    };
+    return AboutComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* HostBinding */])('@pageAnimation'),
+    __metadata("design:type", Object)
+], AboutComponent.prototype, "animatePage", void 0);
+AboutComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-about',
+        template: __webpack_require__("../../../../../src/app/about/about.component.html"),
+        animations: [
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* trigger */])('pageAnimation', [
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])(':enter', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.anim-segment, .page-title', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({
+                        opacity: 0
+                    })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.image-wrapper', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({
+                        transform: 'scale(0) rotate(720deg)',
+                    })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["n" /* group */])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.anim-segment, .page-title', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* stagger */])(250, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* animate */])('800ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])('*'))
+                            ])
+                        ]),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.image-wrapper', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* stagger */])(250, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* animate */])('800ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])('*'))
+                            ])
+                        ])
+                    ])
+                ]),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])(':leave', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["n" /* group */])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.anim-segment, .page-title', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* stagger */])(150, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* animate */])('550ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({
+                                    opacity: 0
+                                }))
+                            ])
+                        ]),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.image-wrapper', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* stagger */])(150, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* animate */])('550ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({
+                                    transform: 'scale(0) rotate(-720deg)'
+                                }))
+                            ])
+                        ])
+                    ])
+                ])
+            ])
+        ]
+    }),
+    __metadata("design:paramtypes", [])
+], AboutComponent);
+
+//# sourceMappingURL=about.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--The whole content below can be removed with the new code.-->\n<div class=\"page\">\n\n  <header>\n    <nav class=\"navbar navbar-default\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" routerLink=\"/about\">Portfolio</a>\n        </div>\n\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n          <!-- call navigation element -->\n          <app-navigation></app-navigation>\n        </div>\n\n      </div>\n    </nav>\n  </header>\n\n  <div class=\"container main-container\">\n\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n\n        <div style=\"position:relative;\">\n          <div class=\"page-animation\" [@routerAnimations]=\"prepareRouteTransition(outlet)\">\n            <router-outlet #outlet=\"outlet\"></router-outlet>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n  </div>\n</div>\n\n<div class=\"footer-sticked\">\n  <footer class=\"footer\">\n    <!--<div class=\"container\">-->\n\n      <app-technology></app-technology>\n\n      <p>© dexdev 2017</p>\n    <!--</div>-->\n  </footer>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__animations_animations__ = __webpack_require__("../../../../../src/app/_animations/animations.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var AppComponent = (function () {
+    function AppComponent() {
+        this.title = 'portfolio angular 4';
+    }
+    AppComponent.prototype.prepareRouteTransition = function (outlet) {
+        var animation = outlet.activatedRouteData['animation'] || {};
+        return animation['value'] || null;
+    };
+    return AppComponent;
+}());
+AppComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-root',
+        template: __webpack_require__("../../../../../src/app/app.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/app.component.css")],
+        animations: [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__animations_animations__["a" /* routerAnimation */])()]
+    })
+], AppComponent);
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__about_about_component__ = __webpack_require__("../../../../../src/app/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_projects_service__ = __webpack_require__("../../../../../src/app/services/projects.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_mailer_mailer_service__ = __webpack_require__("../../../../../src/app/services/mailer/mailer.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__projects_projects_component__ = __webpack_require__("../../../../../src/app/projects/projects.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__default_default_component__ = __webpack_require__("../../../../../src/app/default/default.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__contact_contact_component__ = __webpack_require__("../../../../../src/app/contact/contact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__project_detail_project_detail_component__ = __webpack_require__("../../../../../src/app/project-detail/project-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__technology_technology_component__ = __webpack_require__("../../../../../src/app/technology/technology.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+// import services
+
+
+// import component
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["b" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__about_about_component__["a" /* AboutComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__projects_projects_component__["a" /* ProjectsComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__default_default_component__["a" /* DefaultComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__navigation_navigation_component__["a" /* NavigationComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__contact_contact_component__["a" /* ContactComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__project_detail_project_detail_component__["a" /* ProjectDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__technology_technology_component__["a" /* TechnologyComponent */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_5__app_routing__["a" /* AppRouting */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* HttpModule */]
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_9__services_projects_service__["a" /* ProjectsService */],
+            __WEBPACK_IMPORTED_MODULE_10__services_mailer_mailer_service__["a" /* MailerService */]
+        ],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
+    })
+], AppModule);
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.routing.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_about_component__ = __webpack_require__("../../../../../src/app/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__default_default_component__ = __webpack_require__("../../../../../src/app/default/default.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__ = __webpack_require__("../../../../../src/app/contact/contact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__project_detail_project_detail_component__ = __webpack_require__("../../../../../src/app/project-detail/project-detail.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRouting; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+// Import component for routing
+
+
+
+
+
+var appRoutes = [
+    {
+        path: '',
+        redirectTo: '/project',
+        pathMatch: 'full'
+    },
+    {
+        path: 'project',
+        component: __WEBPACK_IMPORTED_MODULE_2__home_home_component__["a" /* HomeComponent */],
+        data: {
+            animation: {
+                value: 'home'
+            },
+            type: 'main-nav',
+            navName: 'project'
+        }
+    },
+    {
+        path: 'project/:id',
+        component: __WEBPACK_IMPORTED_MODULE_6__project_detail_project_detail_component__["a" /* ProjectDetailComponent */],
+        data: {
+            animation: {
+                value: 'project-detail'
+            }
+        }
+    },
+    {
+        path: 'about',
+        component: __WEBPACK_IMPORTED_MODULE_3__about_about_component__["a" /* AboutComponent */],
+        data: {
+            animation: {
+                value: 'about'
+            },
+            type: 'main-nav',
+            navName: 'about'
+        }
+    },
+    {
+        path: 'contact',
+        component: __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__["a" /* ContactComponent */],
+        data: {
+            animation: {
+                value: 'contact'
+            },
+            type: 'main-nav',
+            navName: 'contact'
+        }
+    },
+    {
+        path: '**',
+        component: __WEBPACK_IMPORTED_MODULE_4__default_default_component__["a" /* DefaultComponent */],
+        data: {
+            animation: {
+                value: 'default'
+            }
+        }
+    }
+];
+var AppRouting = (function () {
+    function AppRouting() {
+    }
+    return AppRouting;
+}());
+AppRouting = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */].forRoot(appRoutes)
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */]
+        ]
+    })
+], AppRouting);
+
+//# sourceMappingURL=app.routing.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/contact/contact.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-sm-12\">\n\n\n    <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">\n        <h1>\n          Write to us\n        </h1>\n      </div>\n      <div class=\"panel-body\">\n\n        <form name=\"contact\" class=\"contact-form\" (ngSubmit)=\"contact.form.valid && send()\" #contact=\"ngForm\" novalidate>\n\n          <div class=\"form-group\">\n            <label for=\"name\" class=\"control-label\">First name:</label>\n            <input type=\"text\" class=\"form-control\" name=\"name\" id=\"name\" [(ngModel)]=\"model.name\" #name=\"ngModel\">\n          </div>\n\n          <div class=\"form-group\">\n            <label for=\"surname\" class=\"control-label\">Last name:</label>\n            <input type=\"text\" class=\"form-control\" name=\"surname\" id=\"surname\" [(ngModel)]=\"model.surname\" #surname=\"ngModel\">\n          </div>\n\n          <div class=\"form-group\" [ngClass]=\"{'has-error': contact.submitted && !email.valid }\">\n            <label for=\"email\" class=\"control-label\">Email: <span class=\"required\">*</span></label>\n            <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" [(ngModel)]=\"model.email\" #email=\"ngModel\" required pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\">\n            <div class=\"help-block\" *ngIf=\"contact.submitted && !email.valid || !email.untouched\">\n              <div  *ngIf=\"email.errors && email.errors.required\">\n                Email is required\n              </div>\n              <div  *ngIf=\"email.errors && email.errors.pattern\">\n                Email is invalid\n              </div>\n            </div>\n          </div>\n\n          <div class=\"form-group\" [ngClass]=\"{'has-error': contact.submitted && !message.valid }\">\n            <label for=\"message\" class=\"control-label\">Message: <span class=\"required\">*</span></label>\n            <textarea class=\"form-control\" rows=\"3\" id=\"message\" name=\"message\" [(ngModel)]=\"model.message\" #message=\"ngModel\" required></textarea>\n            <div *ngIf=\"contact.submitted && !message.valid\" class=\"help-block\">Message is required</div>\n          </div>\n\n          <div class=\"form-group\">\n            <button class=\"btn btn-primary\">Send message</button>\n          </div>\n\n        </form>\n\n      </div>\n    </div>\n\n  </div>\n\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/contact/contact.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_mailer_mailer_service__ = __webpack_require__("../../../../../src/app/services/mailer/mailer.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ContactComponent = (function () {
+    function ContactComponent(mailer) {
+        this.mailer = mailer;
+        this.model = {};
+    }
+    ContactComponent.prototype.ngOnInit = function () { };
+    ContactComponent.prototype.send = function () {
+        this.mailer.sendMail(this.model).subscribe(function (data) {
+            console.log(data);
+        });
+    };
+    return ContactComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* HostBinding */])('@pageAnimation'),
+    __metadata("design:type", Object)
+], ContactComponent.prototype, "model", void 0);
+ContactComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-contact',
+        template: __webpack_require__("../../../../../src/app/contact/contact.component.html"),
+        animations: [
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* trigger */])('pageAnimation', [
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':enter', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                        transform: 'scale(0)'
+                    })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel .form-group', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                        transform: 'translateX(100vw)'
+                    })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel', [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(250, [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('600ms cubic-bezier(0.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])('*'))
+                        ])
+                    ]),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel .form-group', [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(250, [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('300ms cubic-bezier(0.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])('*'))
+                        ])
+                    ])
+                ]),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':leave', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel', [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(250, [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('600ms cubic-bezier(0.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                                transform: 'scale(0)'
+                            }))
+                        ])
+                    ])
+                ])
+            ])
+        ]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_mailer_mailer_service__["a" /* MailerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_mailer_mailer_service__["a" /* MailerService */]) === "function" && _a || Object])
+], ContactComponent);
+
+var _a;
+//# sourceMappingURL=contact.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/default/default.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/default/default.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<section class=\"page--404\">\n\n  <h1 class=\"title\">404 Page not found</h1>\n\n  <div class=\"content\">\n    <div class=\"image\">\n      <picture>\n        <img src=\"assets/images/gf.png\" alt=\"not found\">\n      </picture>\n\n      <p>Ovde nema nicega sto bi ti bilo zanimljivo</p>\n    </div>\n  </div>\n\n  <div class=\"help-nav\">\n    <app-navigation></app-navigation>\n  </div>\n\n</section>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/default/default.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DefaultComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var DefaultComponent = (function () {
+    function DefaultComponent() {
+    }
+    DefaultComponent.prototype.ngOnInit = function () {
+    };
+    return DefaultComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* HostBinding */])('@pageAnimation'),
+    __metadata("design:type", Object)
+], DefaultComponent.prototype, "title", void 0);
+DefaultComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-default',
+        template: __webpack_require__("../../../../../src/app/default/default.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/default/default.component.css")],
+        animations: [
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* trigger */])('pageAnimation', [
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])(':enter', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.title', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({
+                        transform: 'translateX(100vw)'
+                    })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.image picture', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({
+                        transform: 'scale(0)'
+                    })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.image p, .help-nav', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({
+                        opacity: 0
+                    })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.title, .image picture', [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* stagger */])(150, [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* animate */])('800ms cubic-bezier(0,-0.01,.5,1.72)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])('*'))
+                        ])
+                    ]),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.image p, .help-nav', [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* stagger */])(250, [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* animate */])('800ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])('*'))
+                        ])
+                    ])
+                ]),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])(':leave', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.image p, .help-nav', [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* stagger */])(250, [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* animate */])('800ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({
+                                opacity: 0
+                            }))
+                        ])
+                    ]),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["n" /* group */])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.title', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* stagger */])(150, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* animate */])('800ms cubic-bezier(.91,-0.59,1,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({
+                                    transform: 'translateX(-100vw)'
+                                }))
+                            ])
+                        ]),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* query */])('.image picture', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* stagger */])(150, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* animate */])('800ms cubic-bezier(.91,-0.59,1,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({
+                                    transform: 'scale(0)'
+                                }))
+                            ])
+                        ])
+                    ])
+                ])
+            ])
+        ]
+    }),
+    __metadata("design:paramtypes", [])
+], DefaultComponent);
+
+//# sourceMappingURL=default.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/home.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"content\">\n\n  <h1 class=\"page-title\">Project's I worked on</h1>\n\n  <div class=\"row\">\n    <app-projects\n      class=\"projects\"\n      *ngFor=\"let project of projects;trackBy: project?.title\"\n      [project]=\"project\">\n    </app-projects>\n\n  </div>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/home.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_projects_service__ = __webpack_require__("../../../../../src/app/services/projects.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+// import animations
+
+var HomeComponent = (function () {
+    function HomeComponent(projectService) {
+        this.projectService = projectService;
+        this.animatePage = true;
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+        this.projects = this.projectService.getAll();
+        // indexing data object
+        for (var i = 0; i < this.projects.length; i++) {
+            this.projects[i]['index'] = i;
+        }
+    };
+    return HomeComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* HostBinding */])('@pageAnimation'),
+    __metadata("design:type", Object)
+], HomeComponent.prototype, "animatePage", void 0);
+HomeComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-home',
+        template: __webpack_require__("../../../../../src/app/home/home.component.html"),
+        animations: [
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* trigger */])('pageAnimation', [
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':enter', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.page-title', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                        opacity: 0
+                    })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.projects .thumbnail', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                        transform: 'translateX(100vw)',
+                        opacity: 0
+                    })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.projects .thumbnail, .page-title', [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('800ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])('*'))
+                        ])
+                    ])
+                ]),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':leave', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["n" /* group */])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.projects .thumbnail', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('550ms cubic-bezier(.91,-0.59,1,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                                    transform: 'translateX(-100vw)',
+                                    opacity: 0
+                                }))
+                            ])
+                        ]),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.page-title', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('550ms cubic-bezier(.91,-0.59,1,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                                    opacity: 0
+                                }))
+                            ])
+                        ])
+                    ])
+                ])
+            ])
+        ]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_projects_service__["a" /* ProjectsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_projects_service__["a" /* ProjectsService */]) === "function" && _a || Object])
+], HomeComponent);
+
+var _a;
+//# sourceMappingURL=home.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/navigation/navigation.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/navigation/navigation.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<ul class=\"nav navbar-nav navbar-right\">\n\n  <li *ngFor=\"let router of routers\" routerLinkActive=\"active\">\n    <a routerLink=\"/{{router.path}}\">{{router.data.navName}}</a>\n  </li>\n\n</ul>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/navigation/navigation.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigationComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NavigationComponent = (function () {
+    function NavigationComponent(router) {
+        this.router = router;
+        this.routers = [];
+    }
+    NavigationComponent.prototype.ngOnInit = function () {
+        var routerItem = this.router.config;
+        for (var i = 0; i < routerItem.length; i++) {
+            if (routerItem[i].data && routerItem[i].data.type === 'main-nav') {
+                this.routers.push(routerItem[i]);
+            }
+        }
+    };
+    return NavigationComponent;
+}());
+NavigationComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-navigation',
+        template: __webpack_require__("../../../../../src/app/navigation/navigation.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/navigation/navigation.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object])
+], NavigationComponent);
+
+var _a;
+//# sourceMappingURL=navigation.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/project-detail/project-detail.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<section class=\"row project-detail\">\n  <div class=\"col-sm-12\">\n\n    <h1 class=\"project-title\">\n      <a target=\"_blank\" href=\"{{ project.link }}\">\n        {{ project.title }}\n      </a>\n    </h1>\n\n    <div class=\"bs-callout bs-callout-info\">\n\n      <div class=\"row\">\n        <div *ngIf=\"project.images\" class=\"col-sm-4\">\n          <img class=\"media-object\" src=\"/assets/images/projects/{{project.images[0]}}\" alt=\"sea\" />\n        </div>\n\n        <div class=\"col-sm-8\">\n          {{ project.description }}\n        </div>\n      </div>\n    </div>\n\n    <p class=\"project-link\">\n      <span class=\"glyphicon glyphicon-link\" aria-hidden=\"true\"></span>\n      <a target=\"_blank\" href=\"{{ project.link }}\">{{ project.link }}</a>\n    </p>\n\n    <div class=\"well technology\">\n      <h2>Technology</h2>\n      <ul class=\"list-group\">\n        <li *ngFor=\"let teach of project.teach\" class=\"list-group-item\">{{ teach }}</li>\n      </ul>\n    </div>\n\n    <div *ngIf=\"project.images && project.images.length > 1\" class=\"well images\">\n      <div class=\"row\">\n        <div *ngFor=\"let image of project.images\" class=\"col-sm-4\">\n          <img src=\"/assets/images/projects/{{ image }}\" alt=\"sss\" />\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n</section>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/project-detail/project-detail.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_projects_service__ = __webpack_require__("../../../../../src/app/services/projects.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectDetailComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ProjectDetailComponent = (function () {
+    function ProjectDetailComponent(route, router, projectS) {
+        this.route = route;
+        this.router = router;
+        this.projectS = projectS;
+    }
+    ProjectDetailComponent.prototype.ngOnInit = function () {
+        this.uid = +this.route.snapshot.params['id'];
+        this.project = this.projectS.getItem(this.uid);
+    };
+    return ProjectDetailComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* HostBinding */])('@pageAnimation'),
+    __metadata("design:type", Number)
+], ProjectDetailComponent.prototype, "uid", void 0);
+ProjectDetailComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-project-detail',
+        template: __webpack_require__("../../../../../src/app/project-detail/project-detail.component.html"),
+        animations: [
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* trigger */])('pageAnimation', [
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':enter', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.project-title, .bs-callout, .project-link, .technology, .images', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                        opacity: 0
+                    })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.project-title, .bs-callout, .project-link, .technology, .images', [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(250, [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('500ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])('*'))
+                        ])
+                    ])
+                ]),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':leave', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["n" /* group */])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.technology', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('350ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                                    transform: 'translateX(-100vw)'
+                                }))
+                            ])
+                        ]),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.images', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('350ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                                    transform: 'translateX(100vw)'
+                                }))
+                            ])
+                        ])
+                    ]),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.project-link', [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('350ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                                transform: 'translateX(-100vw)'
+                            }))
+                        ])
+                    ]),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["n" /* group */])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.project-title', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('350ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                                    transform: 'translateX(100vw)'
+                                }))
+                            ])
+                        ]),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.bs-callout', [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('350ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                                    transform: 'translateX(-100vw)'
+                                }))
+                            ])
+                        ])
+                    ])
+                ])
+            ])
+        ]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_projects_service__["a" /* ProjectsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_projects_service__["a" /* ProjectsService */]) === "function" && _c || Object])
+], ProjectDetailComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=project-detail.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/projects/projects.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"col-sm-6 col-md-4\">\n  <div class=\"thumbnail\">\n    <a routerLink=\"/project/{{project.index}}\">\n      <img *ngIf=\"project.images\" src=\"/assets/images/projects/{{ project.images[0] }}\" alt=\"sea\">\n      <div class=\"caption\">\n        <h3>{{ project.title }}</h3>\n      </div>\n    </a>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/projects/projects.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectsComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProjectsComponent = (function () {
+    function ProjectsComponent() {
+    }
+    ProjectsComponent.prototype.ngOnInit = function () { };
+    return ProjectsComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __metadata("design:type", Object)
+], ProjectsComponent.prototype, "project", void 0);
+ProjectsComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-projects',
+        template: __webpack_require__("../../../../../src/app/projects/projects.component.html")
+    }),
+    __metadata("design:paramtypes", [])
+], ProjectsComponent);
+
+//# sourceMappingURL=projects.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/mailer/mailer.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MailerService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MailerService = (function () {
+    function MailerService(http) {
+        this.http = http;
+        this.api = 'http://mail.loc';
+    }
+    MailerService.prototype.sendMail = function (data) {
+        var body = new URLSearchParams(data);
+        data = body.toString();
+        return this.http.post(this.api, data, this.headAttach()).map(function (res) { return res.json(); });
+    };
+    MailerService.prototype.headAttach = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic YWRtaW46U3p6Py5vckpzbzIzTHNzaklPSTIu'
+        });
+        return new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
+    };
+    return MailerService;
+}());
+MailerService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */]) === "function" && _a || Object])
+], MailerService);
+
+var _a;
+//# sourceMappingURL=mailer.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/projects.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_projects_data__ = __webpack_require__("../../../../../src/data/projects.data.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectsService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var ProjectsService = (function () {
+    function ProjectsService() {
+        this._groups = [].concat(__WEBPACK_IMPORTED_MODULE_1__data_projects_data__["a" /* projects */]);
+    }
+    ProjectsService.prototype.getAll = function () {
+        return this._groups;
+    };
+    ProjectsService.prototype.getItem = function (id) {
+        return this._groups[id];
+    };
+    return ProjectsService;
+}());
+ProjectsService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])()
+], ProjectsService);
+
+//# sourceMappingURL=projects.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/technology/technology.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"technology items\">\n  <div class=\"item-row\" *ngFor=\"let technology of technologys\">\n    <i class=\"{{ technology.icon }} colored\"></i>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/technology/technology.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TechnologyComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TechnologyComponent = (function () {
+    function TechnologyComponent() {
+    }
+    TechnologyComponent.prototype.ngOnInit = function () {
+        this.technologys = [
+            {
+                title: 'html5',
+                icon: 'devicon-html5-plain-wordmark'
+            },
+            {
+                title: 'css',
+                icon: 'devicon-css3-plain-wordmark'
+            },
+            {
+                title: 'sass',
+                icon: 'devicon-sass-plain'
+            },
+            {
+                title: 'bootstrap',
+                icon: 'devicon-bootstrap-plain'
+            },
+            {
+                title: 'javascript',
+                icon: 'devicon-javascript-plain'
+            },
+            {
+                title: 'jquery',
+                icon: 'devicon-jquery-plain-wordmark'
+            },
+            {
+                title: 'angular',
+                icon: 'devicon-angularjs-plain'
+            },
+            {
+                title: 'gulp',
+                icon: 'devicon-gulp-plain'
+            },
+            {
+                title: 'bower',
+                icon: 'devicon-bower-line-wordmark'
+            },
+            {
+                title: 'apache',
+                icon: 'devicon-apache-plain-wordmark'
+            },
+            {
+                title: 'php',
+                icon: 'devicon-php-plain'
+            },
+            {
+                title: 'codeigniter',
+                icon: 'devicon-codeigniter-plain-wordmark'
+            },
+            {
+                title: 'drupal',
+                icon: 'devicon-drupal-plain-wordmark'
+            },
+            {
+                title: 'doctrine',
+                icon: 'devicon-doctrine-line-wordmark'
+            },
+            {
+                title: 'mysql',
+                icon: 'devicon-mysql-plain-wordmark'
+            },
+            {
+                title: 'google',
+                icon: 'devicon-google-plain'
+            },
+            {
+                title: 'facebook',
+                icon: 'devicon-facebook-plain'
+            },
+            {
+                title: 'photoshop',
+                icon: 'devicon-photoshop-line'
+            },
+            {
+                title: 'linux',
+                icon: 'devicon-linux-plain'
+            },
+            {
+                title: 'debian',
+                icon: 'devicon-debian-plain-wordmark'
+            },
+            {
+                title: 'apple',
+                icon: 'devicon-apple-plain'
+            },
+            {
+                title: 'git',
+                icon: 'devicon-git-plain-wordmark'
+            },
+            {
+                title: 'github',
+                icon: 'devicon-github-plain-wordmark'
+            },
+            {
+                title: 'gitlab',
+                icon: 'devicon-gitlab-plain-wordmark'
+            }
+        ];
+    };
+    return TechnologyComponent;
+}());
+TechnologyComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-technology',
+        template: __webpack_require__("../../../../../src/app/technology/technology.component.html")
+    }),
+    __metadata("design:paramtypes", [])
+], TechnologyComponent);
+
+//# sourceMappingURL=technology.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/data/projects.data.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return projects; });
+var projects = [
+    {
+        title: 'Angular project',
+        description: 'Ovo je bio dobar projekat',
+        teach: [
+            'angular', 'php', 'laravel'
+        ],
+        link: 'http://www.google.com',
+        images: [
+            'project.jpg',
+            'project1.jpg',
+        ]
+    },
+    {
+        title: 'Angular project 2',
+        description: 'Ovo je bio dobar projekat',
+        teach: [
+            'angular', 'php', 'laravel'
+        ],
+        link: 'http://www.google.com',
+        images: [
+            'project2.jpg'
+        ]
+    },
+    {
+        title: 'Angular project 3',
+        description: 'Ovo je bio dobar projekat',
+        teach: [
+            'angular', 'php', 'laravel'
+        ],
+        link: 'http://www.google.com',
+        images: [
+            'project3.jpg',
+            'project.jpg',
+            'project4.jpg',
+        ]
+    },
+    {
+        title: 'Angular project 5',
+        description: 'Ovo je bio dobar projekat',
+        teach: [
+            'angular', 'php', 'laravel'
+        ],
+        link: 'http://www.google.com',
+        images: [
+            'project.jpg'
+        ]
+    }
+];
+//# sourceMappingURL=projects.data.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/environments/environment.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `.angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
+var environment = {
+    production: false
+};
+//# sourceMappingURL=environment.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/main.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* enableProdMode */])();
+}
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("../../../../../src/main.ts");
+
+
+/***/ })
+
+},[0]);
+//# sourceMappingURL=main.bundle.js.map
