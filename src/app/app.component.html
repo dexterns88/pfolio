@@ -1,39 +1,53 @@
 <!--The whole content below can be removed with the new code.-->
-<header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
+<div class="page">
 
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" routerLink="/about">Portfolio</a>
-      </div>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <!-- call navigation element -->
-        <app-navigation></app-navigation>
-      </div>
-
-    </div>
-  </nav>
-</header>
-
-<div class="container">
-
-  <div class="row">
-    <div class="col-sm-12">
-
-      <div style="position:relative;">
-        <div class="page-animation" [@routerAnimations]="prepareRouteTransition(outlet)">
-          <router-outlet #outlet="outlet"></router-outlet>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" routerLink="/about">Portfolio</a>
         </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <!-- call navigation element -->
+          <app-navigation></app-navigation>
+        </div>
+
       </div>
+    </nav>
+  </header>
 
+  <div class="container main-container">
+
+    <div class="row">
+      <div class="col-sm-12">
+
+        <div style="position:relative;">
+          <div class="page-animation" [@routerAnimations]="prepareRouteTransition(outlet)">
+            <router-outlet #outlet="outlet"></router-outlet>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
 
+  </div>
+</div>
+
+<div class="footer-sticked">
+  <footer class="footer">
+    <!--<div class="container">-->
+
+      <app-technology></app-technology>
+
+      <p>© dexdev 2017</p>
+    <!--</div>-->
+  </footer>
 </div>

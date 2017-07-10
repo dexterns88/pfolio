@@ -20,6 +20,7 @@ import { DefaultComponent } from './default/default.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { TechnologyComponent } from './technology/technology.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     DefaultComponent,
     NavigationComponent,
     ContactComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    TechnologyComponent
   ],
   imports: [
     BrowserModule,

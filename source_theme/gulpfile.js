@@ -25,18 +25,19 @@ var gulp = require('gulp'),
       'source/scss/*.scss'
     ],
     fonts = [
-      'node_modules/font-awesome/fonts/*'
+      'node_modules/devicon/fonts/*'
     ];
 
 var dest = [];
 
 dest['css'] = '../src/assets/css';
 dest['js'] = '../src/assets/js';
+dest['fonts'] = '../src/assets/fonts';
 
 //FA FONTS
 gulp.task('fonts', function() {
   return gulp.src(fonts)
-    .pipe(gulp.dest('fonts'));
+    .pipe(gulp.dest(dest['fonts']));
 });
 
 //CSS
