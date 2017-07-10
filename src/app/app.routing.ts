@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     component: ProjectDetailComponent,
     data: {
       animation: {
-        value: 'project-detail'
+        value: 'projectDetail'
       }
     }
   },
