@@ -25,7 +25,7 @@ var gulp = require('gulp'),
       'source/scss/*.scss'
     ],
     fonts = [
-      'node_modules/devicon/fonts/*'
+      'node_modules/font-awesome/fonts/*'
     ];
 
 var dest = [];

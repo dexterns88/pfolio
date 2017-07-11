@@ -1,6 +1,16 @@
 
 <ul class="nav navbar-nav navbar-right">
 
+  <li>
+    <a class="soc tw" target="_blank" href="https://twitter.com/Dexter_ns88"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+  </li>
+  <li>
+    <a class="soc fb" target="_blank" href="https://www.facebook.com/dexterns88"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+  </li>
+  <li>
+    <a class="soc ln" target="_blank" href="https://www.linkedin.com/in/dexterns88"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+  </li>
+
   <li *ngFor="let router of routers" routerLinkActive="active">
     <a routerLink="/{{router.path}}">{{router.data.navName}}</a>
   </li>

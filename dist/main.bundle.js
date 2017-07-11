@@ -144,7 +144,7 @@ AboutComponent = __decorate([
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The whole content below can be removed with the new code.-->\n<div class=\"page\">\n\n  <header>\n    <nav class=\"navbar navbar-default\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" routerLink=\"/about\">Portfolio</a>\n        </div>\n\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n          <!-- call navigation element -->\n          <app-navigation></app-navigation>\n        </div>\n\n      </div>\n    </nav>\n  </header>\n\n  <div class=\"container main-container\">\n\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n\n        <div style=\"position:relative;\">\n          <div class=\"page-animation\" [@routerAnimations]=\"prepareRouteTransition(outlet)\">\n            <router-outlet #outlet=\"outlet\"></router-outlet>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n  </div>\n</div>\n\n<div class=\"footer-sticked\">\n  <footer class=\"footer\">\n    <!--<div class=\"container\">-->\n\n      <app-technology></app-technology>\n\n      <p>© dexdev 2017</p>\n    <!--</div>-->\n  </footer>\n</div>"
+module.exports = "<!--The whole content below can be removed with the new code.-->\n<div class=\"page\">\n\n  <header>\n    <nav class=\"navbar navbar-default\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" routerLink=\"/about\">DexDev</a>\n        </div>\n\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n          <!-- call navigation element -->\n          <app-navigation></app-navigation>\n        </div>\n\n      </div>\n    </nav>\n  </header>\n\n  <div class=\"container main-container\">\n\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n\n        <div style=\"position:relative;\">\n          <div class=\"page-animation\" [@routerAnimations]=\"prepareRouteTransition(outlet)\">\n            <router-outlet #outlet=\"outlet\"></router-outlet>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n  </div>\n</div>\n\n<div class=\"footer-sticked\">\n  <footer class=\"footer\">\n    <!--<div class=\"container\">-->\n\n      <app-technology></app-technology>\n\n      <p>© dexdev 2017</p>\n    <!--</div>-->\n  </footer>\n</div>"
 
 /***/ }),
 
@@ -376,7 +376,7 @@ AppRouting = __decorate([
 /***/ "../../../../../src/app/contact/contact.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-12\">\n\n\n    <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">\n        <h1>\n          Write to us\n        </h1>\n      </div>\n      <div class=\"panel-body\">\n\n        <form name=\"contact\" class=\"contact-form\" (ngSubmit)=\"contact.form.valid && send()\" #contact=\"ngForm\" novalidate>\n\n          <div class=\"form-group\">\n            <label for=\"name\" class=\"control-label\">First name:</label>\n            <input type=\"text\" class=\"form-control\" name=\"name\" id=\"name\" [(ngModel)]=\"model.name\" #name=\"ngModel\">\n          </div>\n\n          <div class=\"form-group\">\n            <label for=\"surname\" class=\"control-label\">Last name:</label>\n            <input type=\"text\" class=\"form-control\" name=\"surname\" id=\"surname\" [(ngModel)]=\"model.surname\" #surname=\"ngModel\">\n          </div>\n\n          <div class=\"form-group\" [ngClass]=\"{'has-error': contact.submitted && !email.valid }\">\n            <label for=\"email\" class=\"control-label\">Email: <span class=\"required\">*</span></label>\n            <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" [(ngModel)]=\"model.email\" #email=\"ngModel\" required pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\">\n            <div class=\"help-block\" *ngIf=\"contact.submitted && !email.valid || !email.untouched\">\n              <div  *ngIf=\"email.errors && email.errors.required\">\n                Email is required\n              </div>\n              <div  *ngIf=\"email.errors && email.errors.pattern\">\n                Email is invalid\n              </div>\n            </div>\n          </div>\n\n          <div class=\"form-group\" [ngClass]=\"{'has-error': contact.submitted && !message.valid }\">\n            <label for=\"message\" class=\"control-label\">Message: <span class=\"required\">*</span></label>\n            <textarea class=\"form-control\" rows=\"3\" id=\"message\" name=\"message\" [(ngModel)]=\"model.message\" #message=\"ngModel\" required></textarea>\n            <div *ngIf=\"contact.submitted && !message.valid\" class=\"help-block\">Message is required</div>\n          </div>\n\n          <div class=\"form-group\">\n            <button class=\"btn btn-primary\">Send message</button>\n          </div>\n\n        </form>\n\n      </div>\n    </div>\n\n  </div>\n\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-sm-12\">\n\n    <div class=\"contact-head\">\n      <p>\n        I code, blog, tweet and I look forward to hearing from you.\n      </p>\n\n      <p>\n        You can send me mail:\n        <a href=\"&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#101;&#120;&#116;&#101;&#114;&#110;&#115;&#056;&#056;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;\">\n          &#100;&#101;&#120;&#116;&#101;&#114;&#110;&#115;&#056;&#056;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;\n        </a>\n      </p>\n\n      <br />\n\n    </div>\n\n    <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">\n        <h1>\n          Write to us\n        </h1>\n      </div>\n      <div class=\"panel-body\">\n\n        <form name=\"contact\" class=\"contact-form\" (ngSubmit)=\"contact.form.valid && send()\" #contact=\"ngForm\" novalidate>\n\n          <div class=\"form-group\">\n            <label for=\"name\" class=\"control-label\">First name:</label>\n            <input type=\"text\" class=\"form-control\" name=\"name\" id=\"name\" [(ngModel)]=\"model.name\" #name=\"ngModel\">\n          </div>\n\n          <div class=\"form-group\">\n            <label for=\"surname\" class=\"control-label\">Last name:</label>\n            <input type=\"text\" class=\"form-control\" name=\"surname\" id=\"surname\" [(ngModel)]=\"model.surname\" #surname=\"ngModel\">\n          </div>\n\n          <div class=\"form-group\" [ngClass]=\"{'has-error': contact.submitted && !email.valid }\">\n            <label for=\"email\" class=\"control-label\">Email: <span class=\"required\">*</span></label>\n            <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" [(ngModel)]=\"model.email\" #email=\"ngModel\" required pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\">\n            <div class=\"help-block\" *ngIf=\"contact.submitted && !email.valid || !email.untouched\">\n              <div  *ngIf=\"email.errors && email.errors.required\">\n                Email is required\n              </div>\n              <div  *ngIf=\"email.errors && email.errors.pattern\">\n                Email is invalid\n              </div>\n            </div>\n          </div>\n\n          <div class=\"form-group\" [ngClass]=\"{'has-error': contact.submitted && !message.valid }\">\n            <label for=\"message\" class=\"control-label\">Message: <span class=\"required\">*</span></label>\n            <textarea class=\"form-control\" rows=\"3\" id=\"message\" name=\"message\" [(ngModel)]=\"model.message\" #message=\"ngModel\" required></textarea>\n            <div *ngIf=\"contact.submitted && !message.valid\" class=\"help-block\">Message is required</div>\n          </div>\n\n          <div class=\"form-group\">\n            <button class=\"btn btn-primary\">Send message</button>\n          </div>\n\n        </form>\n\n      </div>\n    </div>\n\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -427,13 +427,13 @@ ContactComponent = __decorate([
         animations: [
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* trigger */])('pageAnimation', [
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':enter', [
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel, .contact-head', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
                         transform: 'scale(0)'
                     })),
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel .form-group', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
                         transform: 'translateX(100vw)'
                     })),
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel, .contact-head', [
                         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(250, [
                             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('600ms cubic-bezier(0.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])('*'))
                         ])
@@ -445,7 +445,7 @@ ContactComponent = __decorate([
                     ])
                 ]),
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':leave', [
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel, .contact-head', [
                         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(250, [
                             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('600ms cubic-bezier(0.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
                                 transform: 'scale(0)'
@@ -698,7 +698,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/navigation/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<ul class=\"nav navbar-nav navbar-right\">\n\n  <li *ngFor=\"let router of routers\" routerLinkActive=\"active\">\n    <a routerLink=\"/{{router.path}}\">{{router.data.navName}}</a>\n  </li>\n\n</ul>"
+module.exports = "\n<ul class=\"nav navbar-nav navbar-right\">\n\n  <li>\n    <a class=\"soc tw\" target=\"_blank\" href=\"https://twitter.com/Dexter_ns88\"><i class=\"fa fa-twitter-square\" aria-hidden=\"true\"></i></a>\n  </li>\n  <li>\n    <a class=\"soc fb\" target=\"_blank\" href=\"https://www.facebook.com/dexterns88\"><i class=\"fa fa-facebook-square\" aria-hidden=\"true\"></i></a>\n  </li>\n  <li>\n    <a class=\"soc ln\" target=\"_blank\" href=\"https://www.linkedin.com/in/dexterns88\"><i class=\"fa fa-linkedin-square\" aria-hidden=\"true\"></i></a>\n  </li>\n\n  <li *ngFor=\"let router of routers\" routerLinkActive=\"active\">\n    <a routerLink=\"/{{router.path}}\">{{router.data.navName}}</a>\n  </li>\n\n</ul>"
 
 /***/ }),
 
@@ -752,7 +752,7 @@ var _a;
 /***/ "../../../../../src/app/project-detail/project-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"row project-detail\">\n  <div class=\"col-sm-12\">\n\n    <h1 class=\"project-title\">\n      <a target=\"_blank\" href=\"{{ project.link }}\">\n        {{ project.title }}\n      </a>\n    </h1>\n\n    <div class=\"bs-callout bs-callout-info\">\n\n      <div class=\"row\">\n        <div *ngIf=\"project.images\" class=\"col-sm-4\">\n          <img class=\"media-object\" src=\"/assets/images/projects/{{project.images[0]}}\" alt=\"sea\" />\n        </div>\n\n        <div class=\"col-sm-8\">\n          {{ project.description }}\n        </div>\n      </div>\n    </div>\n\n    <p class=\"project-link\">\n      <span class=\"glyphicon glyphicon-link\" aria-hidden=\"true\"></span>\n      <a target=\"_blank\" href=\"{{ project.link }}\">{{ project.link }}</a>\n    </p>\n\n    <div class=\"technology\">\n      <span>Technology: </span>\n      <span *ngFor=\"let teach of project.teach\" class=\"label label-primary\">{{ teach }}</span>\n    </div>\n\n    <div *ngIf=\"project.images && project.images.length > 1\" class=\"well images\">\n      <div class=\"row\">\n        <div *ngFor=\"let image of project.images\" class=\"col-sm-4\">\n          <img src=\"/assets/images/projects/{{ image }}\" alt=\"sss\" />\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n</section>"
+module.exports = "<section class=\"row project-detail\">\n  <div class=\"col-sm-12\">\n\n    <h1 class=\"project-title\">\n      <a target=\"_blank\" href=\"{{ project.link }}\">\n        {{ project.title }}\n      </a>\n    </h1>\n\n    <div class=\"bs-callout bs-callout-info\">\n\n      <div class=\"row\">\n        <div *ngIf=\"project.images\" class=\"col-sm-4\">\n          <img class=\"media-object\" src=\"/assets/images/projects/{{project.images[0]}}\" alt=\"sea\" />\n        </div>\n\n        <div class=\"col-sm-8\">\n\n          <div [innerHTML]=\"project.description\"></div>\n\n          <p class=\"project-link\">\n            <span class=\"glyphicon glyphicon-link\" aria-hidden=\"true\"></span>\n            <a target=\"_blank\" href=\"{{ project.link }}\">{{ project.link }}</a>\n          </p>\n\n          <div class=\"technology\">\n            <span>Technology: </span>\n            <span *ngFor=\"let teach of project.teach\" class=\"label label-primary\">{{ teach }}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div *ngIf=\"project.images && project.images.length > 1\" class=\"well images\">\n      <div class=\"row\">\n        <div *ngFor=\"let image of project.images\" class=\"col-sm-4\">\n          <img src=\"/assets/images/projects/{{ image }}\" alt=\"sss\" />\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n</section>"
 
 /***/ }),
 
@@ -1137,7 +1137,7 @@ TechnologyComponent = __decorate([
 var projects = [
     {
         title: 'Angular project',
-        description: 'Ovo je bio dobar projekat',
+        description: '<p>Ovo je bio dobar projekat</p>',
         teach: [
             'angular', 'php', 'laravel'
         ],
@@ -1149,7 +1149,7 @@ var projects = [
     },
     {
         title: 'Angular project 2',
-        description: 'Ovo je bio dobar projekat',
+        description: '<p>Ovo je bio dobar projekat</p>',
         teach: [
             'angular', 'php', 'laravel'
         ],
@@ -1160,7 +1160,7 @@ var projects = [
     },
     {
         title: 'Angular project 3',
-        description: 'Ovo je bio dobar projekat',
+        description: '<p>Ovo je bio dobar projekat</p>',
         teach: [
             'angular', 'php', 'laravel'
         ],
@@ -1173,7 +1173,7 @@ var projects = [
     },
     {
         title: 'Angular project 5',
-        description: 'Ovo je bio dobar projekat',
+        description: '<p>Ovo je bio dobar projekat</p>',
         teach: [
             'angular', 'php', 'laravel'
         ],

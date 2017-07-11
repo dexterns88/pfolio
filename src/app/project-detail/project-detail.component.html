@@ -15,19 +15,20 @@
         </div>
 
         <div class="col-sm-8">
-          {{ project.description }}
+
+          <div [innerHTML]="project.description"></div>
+
+          <p class="project-link">
+            <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+            <a target="_blank" href="{{ project.link }}">{{ project.link }}</a>
+          </p>
+
+          <div class="technology">
+            <span>Technology: </span>
+            <span *ngFor="let teach of project.teach" class="label label-primary">{{ teach }}</span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <p class="project-link">
-      <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-      <a target="_blank" href="{{ project.link }}">{{ project.link }}</a>
-    </p>
-
-    <div class="technology">
-      <span>Technology: </span>
-      <span *ngFor="let teach of project.teach" class="label label-primary">{{ teach }}</span>
     </div>
 
     <div *ngIf="project.images && project.images.length > 1" class="well images">

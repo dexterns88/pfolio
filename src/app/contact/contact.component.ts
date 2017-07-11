@@ -10,14 +10,14 @@ import 'rxjs/Rx';
   animations: [
     trigger('pageAnimation', [
       transition(':enter', [
-        query('.panel', style({
+        query('.panel, .contact-head', style({
           transform: 'scale(0)'
         })),
         query('.panel .form-group', style({
           transform: 'translateX(100vw)'
         })),
 
-        query('.panel', [
+        query('.panel, .contact-head', [
           stagger(250, [
             animate('600ms cubic-bezier(0.35,0,.25,1)', style('*'))
           ])
@@ -29,7 +29,7 @@ import 'rxjs/Rx';
         ])
       ]),
       transition(':leave', [
-        query('.panel', [
+        query('.panel, .contact-head', [
           stagger(250, [
             animate('600ms cubic-bezier(0.35,0,.25,1)', style({
               transform: 'scale(0)'
