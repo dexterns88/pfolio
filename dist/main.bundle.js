@@ -27,7 +27,7 @@ function routeAnim() {
     return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["i" /* trigger */])('routerAnimations', [
         // router navigation is here global
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* transition */])('* => *', [
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* query */])(':enter', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["h" /* style */])({
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* query */])(':leave', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["h" /* style */])({
                 position: 'absolute',
                 top: 0,
                 left: 0,
@@ -141,24 +141,6 @@ AboutComponent = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
@@ -183,7 +165,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'portfolio angular 4';
+        this.title = 'dexDev ';
     }
     AppComponent.prototype.prepareRouteTransition = function (outlet) {
         var animation = outlet.activatedRouteData['animation'] || {};
@@ -195,7 +177,6 @@ AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/app.component.css")],
         animations: [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__animations_animations__["a" /* routerAnimation */])()]
     })
 ], AppComponent);
@@ -336,7 +317,7 @@ var appRoutes = [
         component: __WEBPACK_IMPORTED_MODULE_6__project_detail_project_detail_component__["a" /* ProjectDetailComponent */],
         data: {
             animation: {
-                value: 'project-detail'
+                value: 'projectDetail'
             }
         }
     },
@@ -771,7 +752,7 @@ var _a;
 /***/ "../../../../../src/app/project-detail/project-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"row project-detail\">\n  <div class=\"col-sm-12\">\n\n    <h1 class=\"project-title\">\n      <a target=\"_blank\" href=\"{{ project.link }}\">\n        {{ project.title }}\n      </a>\n    </h1>\n\n    <div class=\"bs-callout bs-callout-info\">\n\n      <div class=\"row\">\n        <div *ngIf=\"project.images\" class=\"col-sm-4\">\n          <img class=\"media-object\" src=\"/assets/images/projects/{{project.images[0]}}\" alt=\"sea\" />\n        </div>\n\n        <div class=\"col-sm-8\">\n          {{ project.description }}\n        </div>\n      </div>\n    </div>\n\n    <p class=\"project-link\">\n      <span class=\"glyphicon glyphicon-link\" aria-hidden=\"true\"></span>\n      <a target=\"_blank\" href=\"{{ project.link }}\">{{ project.link }}</a>\n    </p>\n\n    <div class=\"well technology\">\n      <h2>Technology</h2>\n      <ul class=\"list-group\">\n        <li *ngFor=\"let teach of project.teach\" class=\"list-group-item\">{{ teach }}</li>\n      </ul>\n    </div>\n\n    <div *ngIf=\"project.images && project.images.length > 1\" class=\"well images\">\n      <div class=\"row\">\n        <div *ngFor=\"let image of project.images\" class=\"col-sm-4\">\n          <img src=\"/assets/images/projects/{{ image }}\" alt=\"sss\" />\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n</section>"
+module.exports = "<section class=\"row project-detail\">\n  <div class=\"col-sm-12\">\n\n    <h1 class=\"project-title\">\n      <a target=\"_blank\" href=\"{{ project.link }}\">\n        {{ project.title }}\n      </a>\n    </h1>\n\n    <div class=\"bs-callout bs-callout-info\">\n\n      <div class=\"row\">\n        <div *ngIf=\"project.images\" class=\"col-sm-4\">\n          <img class=\"media-object\" src=\"/assets/images/projects/{{project.images[0]}}\" alt=\"sea\" />\n        </div>\n\n        <div class=\"col-sm-8\">\n          {{ project.description }}\n        </div>\n      </div>\n    </div>\n\n    <p class=\"project-link\">\n      <span class=\"glyphicon glyphicon-link\" aria-hidden=\"true\"></span>\n      <a target=\"_blank\" href=\"{{ project.link }}\">{{ project.link }}</a>\n    </p>\n\n    <div class=\"technology\">\n      <span>Technology: </span>\n      <span *ngFor=\"let teach of project.teach\" class=\"label label-primary\">{{ teach }}</span>\n    </div>\n\n    <div *ngIf=\"project.images && project.images.length > 1\" class=\"well images\">\n      <div class=\"row\">\n        <div *ngFor=\"let image of project.images\" class=\"col-sm-4\">\n          <img src=\"/assets/images/projects/{{ image }}\" alt=\"sss\" />\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n</section>"
 
 /***/ }),
 
@@ -837,14 +818,14 @@ ProjectDetailComponent = __decorate([
                                     transform: 'translateX(-100vw)'
                                 }))
                             ])
-                        ]),
+                        ], { optional: true }),
                         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.images', [
                             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
                                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('350ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
                                     transform: 'translateX(100vw)'
                                 }))
                             ])
-                        ])
+                        ], { optional: true })
                     ]),
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.project-link', [
                         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
@@ -852,7 +833,7 @@ ProjectDetailComponent = __decorate([
                                 transform: 'translateX(-100vw)'
                             }))
                         ])
-                    ]),
+                    ], { optional: true }),
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["n" /* group */])([
                         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.project-title', [
                             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
@@ -860,14 +841,14 @@ ProjectDetailComponent = __decorate([
                                     transform: 'translateX(100vw)'
                                 }))
                             ])
-                        ]),
+                        ], { optional: true }),
                         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.bs-callout', [
                             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(150, [
                                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('350ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
                                     transform: 'translateX(-100vw)'
                                 }))
                             ])
-                        ])
+                        ], { optional: true })
                     ])
                 ])
             ])
@@ -1217,7 +1198,8 @@ var projects = [
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 // The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: false
+    production: false,
+    title: 'dexDev'
 };
 //# sourceMappingURL=environment.js.map
 

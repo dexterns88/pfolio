@@ -249,15 +249,26 @@ header {
 $border-technology: #e5e5e5;
 .technology {
   padding: 15px 0;
-  text-align: center;
+  text-align: left;
   border-top: 1px solid $border-technology;
   border-bottom: 1px solid $border-technology;
+  margin-bottom: 30px;
+
+  .footer & {
+    text-align: center;
+  }
 
   .item-row {
     padding: 0 10px;
     display: inline-block;
     vertical-align: middle;
     font-size: 4.4rem;
+  }
+
+  .label {
+    margin: 0 5px;
+    display: inline-block;
+    padding: 5px 8px;
   }
 
   i {

@@ -6,12 +6,11 @@ import { routerAnimation } from './_animations/animations';
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
   animations: [routerAnimation()]
 })
 
 export class AppComponent {
-  title = 'portfolio angular 4';
+  title = 'dexDev ';
 
   prepareRouteTransition(outlet) {
     const animation = outlet.activatedRouteData['animation'] || {};

@@ -25,11 +25,9 @@
       <a target="_blank" href="{{ project.link }}">{{ project.link }}</a>
     </p>
 
-    <div class="well technology">
-      <h2>Technology</h2>
-      <ul class="list-group">
-        <li *ngFor="let teach of project.teach" class="list-group-item">{{ teach }}</li>
-      </ul>
+    <div class="technology">
+      <span>Technology: </span>
+      <span *ngFor="let teach of project.teach" class="label label-primary">{{ teach }}</span>
     </div>
 
     <div *ngIf="project.images && project.images.length > 1" class="well images">

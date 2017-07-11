@@ -32,14 +32,14 @@ import { ProjectsService } from '../services/projects.service';
                 transform: 'translateX(-100vw)'
               }))
             ])
-          ]),
+          ], {optional: true}),
           query('.images', [
             stagger(150, [
               animate('350ms cubic-bezier(.35,0,.25,1)', style({
                 transform: 'translateX(100vw)'
               }))
             ])
-          ])
+          ], {optional: true})
         ]),
 
         query('.project-link', [
@@ -48,7 +48,7 @@ import { ProjectsService } from '../services/projects.service';
               transform: 'translateX(-100vw)'
             }))
           ])
-        ]),
+        ], {optional: true}),
         group([
           query('.project-title', [
             stagger(150, [
@@ -56,14 +56,14 @@ import { ProjectsService } from '../services/projects.service';
                 transform: 'translateX(100vw)'
               }))
             ])
-          ]),
+          ], {optional: true}),
           query('.bs-callout', [
             stagger(150, [
               animate('350ms cubic-bezier(.35,0,.25,1)', style({
                 transform: 'translateX(-100vw)'
               }))
             ])
-          ])
+          ], {optional: true})
         ])
       ])
     ])

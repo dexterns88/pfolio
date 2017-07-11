@@ -9,7 +9,7 @@ function routeAnim() {
 
     // router navigation is here global
     transition('* => *', [
-      query(':enter', style({
+      query(':leave', style({
         position: 'absolute',
         top: 0,
         left: 0,
