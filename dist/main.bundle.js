@@ -463,6 +463,7 @@ var ContactComponent = (function () {
     ContactComponent.prototype.send = function (form) {
         var _this = this;
         this.mailer.sendMail(this.model).subscribe(function (data) {
+            console.log(data);
             // success status and error
             if (data.status === 200) {
                 _this.alert.success(data.status_message, true);
@@ -473,7 +474,7 @@ var ContactComponent = (function () {
             }
         }, function (error) {
             var msg = JSON.parse(error._body);
-            _this.alert.error(msg);
+            _this.alert.error(msg.status_message);
         });
     };
     return ContactComponent;

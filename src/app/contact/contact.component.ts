@@ -57,6 +57,7 @@ export class ContactComponent implements OnInit {
 
     this.mailer.sendMail(this.model).subscribe(
       data => {
+        console.log( data );
         // success status and error
         if ( data.status === 200 ) {
           this.alert.success(data.status_message, true);
@@ -66,7 +67,7 @@ export class ContactComponent implements OnInit {
         }
       }, error => {
         const msg = JSON.parse(error._body);
-        this.alert.error( msg );
+        this.alert.error( msg.status_message );
       }
     );
   }
