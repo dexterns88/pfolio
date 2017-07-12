@@ -65,7 +65,7 @@ export class ContactComponent implements OnInit {
           this.alert.error(data.status_message, true);
         }
       }, error => {
-        const msg = JSON.parse(error._body).message;
+        const msg = JSON.parse(error._body);
         this.alert.error( msg );
       }
     );

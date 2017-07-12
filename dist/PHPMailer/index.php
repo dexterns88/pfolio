@@ -1,30 +1,31 @@
 <?php
 
-// Error handler
-// #i292ox2 - wrong origin access
-// #i292ox3 - user auth is not set
-
-@require_once "config.php";
-
-header('Content-type: application/json');
-header("Access-Control-Allow-Origin: *");
-
 $data = $_POST;
+
+$users = array(
+  'admin' => 'Szz?.orJso23LssjIOI2.'
+);
+
+$origin = 'dexdev.org';
+//$origin = 'dex.loc';
 
 // get user name by key
 $usersName = array_keys($users);
 
-
 // Check if HTTP_ORIGIN exist
 if (!array_key_exists('HTTP_REFERER', $_SERVER)) {
+  header('Content-type: application/json');
+  header("Access-Control-Allow-Origin: *");
   header('HTTP/1.0 401 Unauthorized');
-  echo json_encode(array('error'=>'Only rest api have acceess'));
+  echo json_encode('Only rest api have acceess');
   exit;
 }
 
 // Check if HTTP_ORIGIN is valid
 if (!preg_match('/'.$origin.'/',$_SERVER['HTTP_REFERER'])) {
   $output = "You are not authorized to access this page: #i292ox2";
+  header('Content-type: application/json');
+  header("Access-Control-Allow-Origin: *");
   header('HTTP/1.0 401 Unauthorized');
   echo json_encode($output);
   exit;
@@ -33,6 +34,8 @@ if (!preg_match('/'.$origin.'/',$_SERVER['HTTP_REFERER'])) {
 // Validate auth
 if( !isset($_SERVER['PHP_AUTH_USER'])) {
   $output = 'You are not authorized to access this page: #i292ox3';
+  header('Content-type: application/json');
+  header("Access-Control-Allow-Origin: *");
   header('HTTP/1.0 401 Unauthorized');
   echo json_encode($output);
   exit;
@@ -46,6 +49,8 @@ $pass = $_SERVER['PHP_AUTH_PW'];
 $validated = (in_array($user, $usersName)) && ($pass == $users[$user]);
 
 if( !$validated ) {
+  header('Content-type: application/json');
+  header("Access-Control-Allow-Origin: *");
   header('HTTP/1.0 401 Unauthorized');
   die ("Not authorized");
 }
@@ -100,5 +105,6 @@ Message: {$data['message']}";
     'status_message' => 'Something is wrong with post method'
   );
 }
-
+header('Content-type: application/json');
+header("Access-Control-Allow-Origin: *");
 echo json_encode($output);

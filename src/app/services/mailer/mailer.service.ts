@@ -9,10 +9,6 @@ export class MailerService {
 
   constructor(private http: Http) {
     this.api = environment.mailApi;
-    // 'http://mail.loc';
-    // this.api = '/PHPMailer/index.php';
-
-    console.log(environment);
   }
 
   sendMail(data: any) {

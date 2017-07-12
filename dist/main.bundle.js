@@ -472,7 +472,7 @@ var ContactComponent = (function () {
                 _this.alert.error(data.status_message, true);
             }
         }, function (error) {
-            var msg = JSON.parse(error._body).message;
+            var msg = JSON.parse(error._body);
             _this.alert.error(msg);
         });
     };
@@ -1059,9 +1059,6 @@ var MailerService = (function () {
     function MailerService(http) {
         this.http = http;
         this.api = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].mailApi;
-        // 'http://mail.loc';
-        // this.api = '/PHPMailer/index.php';
-        console.log(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */]);
     }
     MailerService.prototype.sendMail = function (data) {
         var body = new URLSearchParams(data);
