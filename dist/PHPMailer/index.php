@@ -15,7 +15,6 @@ $usersName = array_keys($users);
 
 // Check if HTTP_ORIGIN exist
 if (!array_key_exists('HTTP_REFERER', $_SERVER)) {
-  header('HTTP/1.0 401 Unauthorized');
   $output = array(
     'status' => 400,
     'status_message' => 'Only rest api have acceess'
@@ -26,7 +25,6 @@ if (!array_key_exists('HTTP_REFERER', $_SERVER)) {
 
 // Check if HTTP_ORIGIN is valid
 if (!preg_match('/'.$origin.'/',$_SERVER['HTTP_REFERER'])) {
-  header('HTTP/1.0 401 Unauthorized');
   $output = array(
     'status' => 400,
     'status_message' => 'You are not authorized to access this page: #i292ox2'
@@ -37,7 +35,6 @@ if (!preg_match('/'.$origin.'/',$_SERVER['HTTP_REFERER'])) {
 
 // Validate auth
 if( !isset($_SERVER['PHP_AUTH_USER'])) {
-  header('HTTP/1.0 401 Unauthorized');
   $output = array(
     'status' => 400,
     'status_message' => 'You are not authorized to access this page: #i292ox3'
@@ -54,7 +51,6 @@ $pass = $_SERVER['PHP_AUTH_PW'];
 $validated = (in_array($user, $usersName)) && ($pass == $users[$user]);
 
 if( !$validated ) {
-  header('HTTP/1.0 401 Unauthorized');
   $output = array(
     'status' => 400,
     'status_message' => 'Not authorized'
