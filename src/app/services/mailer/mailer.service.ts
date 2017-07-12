@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions, Response } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class MailerService {
@@ -7,7 +8,11 @@ export class MailerService {
   protected api: string;
 
   constructor(private http: Http) {
-    this.api = 'http://mail.loc';
+    this.api = environment.mailApi;
+    // 'http://mail.loc';
+    // this.api = '/PHPMailer/index.php';
+
+    console.log(environment);
   }
 
   sendMail(data: any) {

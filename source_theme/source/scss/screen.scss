@@ -153,6 +153,9 @@ header {
 .soc {
   font-size: 24px;
   transition: color 1s ease 0s;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  margin-top: 15px;
 
   &.fb {
 

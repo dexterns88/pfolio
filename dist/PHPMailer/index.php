@@ -4,31 +4,26 @@
 // #i292ox2 - wrong origin access
 // #i292ox3 - user auth is not set
 
+@require_once "config.php";
+
 header('Content-type: application/json');
 header("Access-Control-Allow-Origin: *");
 
 $data = $_POST;
-
-$users = array(
-  'admin' => 'Szz?.orJso23LssjIOI2.'
-);
-$origin = '192.168.1.102';
-//$origin = 'dex.loc';
-
 
 // get user name by key
 $usersName = array_keys($users);
 
 
 // Check if HTTP_ORIGIN exist
-if (!array_key_exists('HTTP_ORIGIN', $_SERVER)) {
+if (!array_key_exists('HTTP_REFERER', $_SERVER)) {
   header('HTTP/1.0 401 Unauthorized');
   echo json_encode(array('error'=>'Only rest api have acceess'));
   exit;
 }
 
 // Check if HTTP_ORIGIN is valid
-if (!preg_match('/'.$origin.'/',$_SERVER['HTTP_ORIGIN'])) {
+if (!preg_match('/'.$origin.'/',$_SERVER['HTTP_REFERER'])) {
   $output = "You are not authorized to access this page: #i292ox2";
   header('HTTP/1.0 401 Unauthorized');
   echo json_encode($output);
@@ -87,6 +82,7 @@ Message: {$data['message']}";
   $mail->Body    = $tpl;
   $mail->AltBody = $tplClean;
 
+  // delete this
   if(!$mail->send()) {
     $output = array(
       'status' => 400,

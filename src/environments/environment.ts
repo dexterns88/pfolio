@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  title: 'dexDev'
+  title: 'dexDev',
+  mailApi: 'http://mail.loc'
 };

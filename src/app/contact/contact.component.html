@@ -25,7 +25,7 @@
       </div>
       <div class="panel-body">
 
-        <form name="contact" class="contact-form" (ngSubmit)="contact.form.valid && send()" #contact="ngForm" novalidate>
+        <form name="contact" class="contact-form" (ngSubmit)="contact.form.valid && send(contact)" #contact="ngForm" novalidate>
 
           <div class="form-group">
             <label for="name" class="control-label">First name:</label>

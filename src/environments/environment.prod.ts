@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  title: 'dexDev'
+  title: 'dexDev',
+  mailApi: '/PHPMailer/index.php'
 };

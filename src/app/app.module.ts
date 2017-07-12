@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 // import services
 import { ProjectsService } from './services/projects.service';
 import { MailerService  } from './services/mailer/mailer.service';
+import { AlertService } from './services/alert/alert.service';
 
 // import component
 import { ProjectsComponent } from './projects/projects.component';
@@ -21,6 +22,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { TechnologyComponent } from './technology/technology.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { TechnologyComponent } from './technology/technology.component';
     NavigationComponent,
     ContactComponent,
     ProjectDetailComponent,
-    TechnologyComponent
+    TechnologyComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { TechnologyComponent } from './technology/technology.component';
   ],
   providers: [
     ProjectsService,
-    MailerService
+    MailerService,
+    AlertService
   ],
   bootstrap: [AppComponent]
 })

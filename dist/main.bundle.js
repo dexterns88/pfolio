@@ -27,13 +27,6 @@ function routeAnim() {
     return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["i" /* trigger */])('routerAnimations', [
         // router navigation is here global
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* transition */])('* => *', [
-            // query(':enter', style({
-            //   // position: 'relative',
-            //   // position: 'absolute',
-            //   // top: 0,
-            //   // left: 0,
-            //   // right: 0
-            // }), {optional: true}),
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* query */])(':leave', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["n" /* group */])([
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["o" /* animateChild */])()
             ]), { optional: true }),
@@ -85,7 +78,7 @@ var AboutComponent = (function () {
     return AboutComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* HostBinding */])('@pageAnimation'),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* HostBinding */])('@pageAnimation'),
     __metadata("design:type", Object)
 ], AboutComponent.prototype, "animatePage", void 0);
 AboutComponent = __decorate([
@@ -142,10 +135,58 @@ AboutComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/alert/alert.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"message\" class=\"row\">\n\n  <div [innerHTML]=\"message.text\"\n       [ngClass]=\"{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }\">\n  </div>\n\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/alert/alert.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_alert_alert_service__ = __webpack_require__("../../../../../src/app/services/alert/alert.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var AlertComponent = (function () {
+    function AlertComponent(alertService) {
+        this.alertService = alertService;
+    }
+    AlertComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.alertService.getMessage().subscribe(function (message) { _this.message = message; });
+    };
+    return AlertComponent;
+}());
+AlertComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-alert',
+        template: __webpack_require__("../../../../../src/app/alert/alert.component.html"),
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_alert_alert_service__["a" /* AlertService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_alert_alert_service__["a" /* AlertService */]) === "function" && _a || Object])
+], AlertComponent);
+
+var _a;
+//# sourceMappingURL=alert.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The whole content below can be removed with the new code.-->\n<div class=\"page\">\n\n  <header>\n    <nav class=\"navbar navbar-default\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" routerLink=\"/about\">DexDev</a>\n        </div>\n\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n          <!-- call navigation element -->\n          <app-navigation></app-navigation>\n        </div>\n\n      </div>\n    </nav>\n  </header>\n\n  <div class=\"container main-container\">\n\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n\n        <div style=\"position:relative;\">\n          <div class=\"page-animation\" [@routerAnimations]=\"prepareRouteTransition(outlet)\">\n            <router-outlet #outlet=\"outlet\"></router-outlet>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n  </div>\n</div>\n\n<div class=\"footer-sticked\">\n  <footer class=\"footer\">\n    <!--<div class=\"container\">-->\n\n      <app-technology></app-technology>\n\n      <p>© dexdev 2017</p>\n    <!--</div>-->\n  </footer>\n</div>"
+module.exports = "<!--The whole content below can be removed with the new code.-->\n<div class=\"page\">\n\n  <header>\n    <nav class=\"navbar navbar-default\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" routerLink=\"/about\">DexDev</a>\n        </div>\n\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n          <!-- call navigation element -->\n          <app-navigation></app-navigation>\n        </div>\n\n      </div>\n    </nav>\n  </header>\n\n  <div class=\"container main-container\">\n\n    <app-alert></app-alert>\n\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n\n        <div style=\"position:relative;\">\n          <div class=\"page-animation\" [@routerAnimations]=\"prepareRouteTransition(outlet)\">\n            <router-outlet #outlet=\"outlet\"></router-outlet>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n  </div>\n</div>\n\n<div class=\"footer-sticked\">\n  <footer class=\"footer\">\n    <!--<div class=\"container\">-->\n\n      <app-technology></app-technology>\n\n      <p>© dexdev 2017</p>\n    <!--</div>-->\n  </footer>\n</div>"
 
 /***/ }),
 
@@ -201,12 +242,14 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__about_about_component__ = __webpack_require__("../../../../../src/app/about/about.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_projects_service__ = __webpack_require__("../../../../../src/app/services/projects.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_mailer_mailer_service__ = __webpack_require__("../../../../../src/app/services/mailer/mailer.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__projects_projects_component__ = __webpack_require__("../../../../../src/app/projects/projects.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__default_default_component__ = __webpack_require__("../../../../../src/app/default/default.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__contact_contact_component__ = __webpack_require__("../../../../../src/app/contact/contact.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__project_detail_project_detail_component__ = __webpack_require__("../../../../../src/app/project-detail/project-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__technology_technology_component__ = __webpack_require__("../../../../../src/app/technology/technology.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_alert_alert_service__ = __webpack_require__("../../../../../src/app/services/alert/alert.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__projects_projects_component__ = __webpack_require__("../../../../../src/app/projects/projects.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__default_default_component__ = __webpack_require__("../../../../../src/app/default/default.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__contact_contact_component__ = __webpack_require__("../../../../../src/app/contact/contact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__project_detail_project_detail_component__ = __webpack_require__("../../../../../src/app/project-detail/project-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__technology_technology_component__ = __webpack_require__("../../../../../src/app/technology/technology.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__alert_alert_component__ = __webpack_require__("../../../../../src/app/alert/alert.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -226,7 +269,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // import services
 
 
+
 // import component
+
 
 
 
@@ -244,12 +289,13 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */],
             __WEBPACK_IMPORTED_MODULE_8__about_about_component__["a" /* AboutComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__projects_projects_component__["a" /* ProjectsComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__default_default_component__["a" /* DefaultComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__navigation_navigation_component__["a" /* NavigationComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__contact_contact_component__["a" /* ContactComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__project_detail_project_detail_component__["a" /* ProjectDetailComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__technology_technology_component__["a" /* TechnologyComponent */]
+            __WEBPACK_IMPORTED_MODULE_12__projects_projects_component__["a" /* ProjectsComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__default_default_component__["a" /* DefaultComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__navigation_navigation_component__["a" /* NavigationComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__contact_contact_component__["a" /* ContactComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__project_detail_project_detail_component__["a" /* ProjectDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__technology_technology_component__["a" /* TechnologyComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__alert_alert_component__["a" /* AlertComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -260,7 +306,8 @@ AppModule = __decorate([
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_9__services_projects_service__["a" /* ProjectsService */],
-            __WEBPACK_IMPORTED_MODULE_10__services_mailer_mailer_service__["a" /* MailerService */]
+            __WEBPACK_IMPORTED_MODULE_10__services_mailer_mailer_service__["a" /* MailerService */],
+            __WEBPACK_IMPORTED_MODULE_11__services_alert_alert_service__["a" /* AlertService */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
     })
@@ -362,10 +409,10 @@ var AppRouting = (function () {
 AppRouting = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */].forRoot(appRoutes)
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forRoot(appRoutes)
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */]
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */]
         ]
     })
 ], AppRouting);
@@ -377,7 +424,7 @@ AppRouting = __decorate([
 /***/ "../../../../../src/app/contact/contact.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-12\">\n\n    <div class=\"contact-head\">\n      <p>\n        I code, blog, tweet and I look forward to hearing from you.\n      </p>\n\n      <p>\n        You can send me mail:\n        <a href=\"&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#101;&#120;&#116;&#101;&#114;&#110;&#115;&#056;&#056;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;\">\n          &#100;&#101;&#120;&#116;&#101;&#114;&#110;&#115;&#056;&#056;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;\n        </a>\n      </p>\n\n      <br />\n\n    </div>\n\n    <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">\n        <h1>\n          Write to us\n        </h1>\n      </div>\n      <div class=\"panel-body\">\n\n        <form name=\"contact\" class=\"contact-form\" (ngSubmit)=\"contact.form.valid && send()\" #contact=\"ngForm\" novalidate>\n\n          <div class=\"form-group\">\n            <label for=\"name\" class=\"control-label\">First name:</label>\n            <input type=\"text\" class=\"form-control\" name=\"name\" id=\"name\" [(ngModel)]=\"model.name\" #name=\"ngModel\">\n          </div>\n\n          <div class=\"form-group\">\n            <label for=\"surname\" class=\"control-label\">Last name:</label>\n            <input type=\"text\" class=\"form-control\" name=\"surname\" id=\"surname\" [(ngModel)]=\"model.surname\" #surname=\"ngModel\">\n          </div>\n\n          <div class=\"form-group\" [ngClass]=\"{'has-error': contact.submitted && !email.valid }\">\n            <label for=\"email\" class=\"control-label\">Email: <span class=\"required\">*</span></label>\n            <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" [(ngModel)]=\"model.email\" #email=\"ngModel\" required pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\">\n            <div class=\"help-block\" *ngIf=\"contact.submitted && !email.valid || !email.untouched\">\n              <div  *ngIf=\"email.errors && email.errors.required\">\n                Email is required\n              </div>\n              <div  *ngIf=\"email.errors && email.errors.pattern\">\n                Email is invalid\n              </div>\n            </div>\n          </div>\n\n          <div class=\"form-group\" [ngClass]=\"{'has-error': contact.submitted && !message.valid }\">\n            <label for=\"message\" class=\"control-label\">Message: <span class=\"required\">*</span></label>\n            <textarea class=\"form-control\" rows=\"3\" id=\"message\" name=\"message\" [(ngModel)]=\"model.message\" #message=\"ngModel\" required></textarea>\n            <div *ngIf=\"contact.submitted && !message.valid\" class=\"help-block\">Message is required</div>\n          </div>\n\n          <div class=\"form-group\">\n            <button class=\"btn btn-primary\">Send message</button>\n          </div>\n\n        </form>\n\n      </div>\n    </div>\n\n  </div>\n\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-sm-12\">\n\n    <div class=\"contact-head\">\n      <p>\n        I code, blog, tweet and I look forward to hearing from you.\n      </p>\n\n      <p>\n        You can send me mail:\n        <a href=\"&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#101;&#120;&#116;&#101;&#114;&#110;&#115;&#056;&#056;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;\">\n          &#100;&#101;&#120;&#116;&#101;&#114;&#110;&#115;&#056;&#056;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;\n        </a>\n      </p>\n\n      <br />\n\n    </div>\n\n    <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">\n        <h1>\n          Write to us\n        </h1>\n      </div>\n      <div class=\"panel-body\">\n\n        <form name=\"contact\" class=\"contact-form\" (ngSubmit)=\"contact.form.valid && send(contact)\" #contact=\"ngForm\" novalidate>\n\n          <div class=\"form-group\">\n            <label for=\"name\" class=\"control-label\">First name:</label>\n            <input type=\"text\" class=\"form-control\" name=\"name\" id=\"name\" [(ngModel)]=\"model.name\" #name=\"ngModel\">\n          </div>\n\n          <div class=\"form-group\">\n            <label for=\"surname\" class=\"control-label\">Last name:</label>\n            <input type=\"text\" class=\"form-control\" name=\"surname\" id=\"surname\" [(ngModel)]=\"model.surname\" #surname=\"ngModel\">\n          </div>\n\n          <div class=\"form-group\" [ngClass]=\"{'has-error': contact.submitted && !email.valid }\">\n            <label for=\"email\" class=\"control-label\">Email: <span class=\"required\">*</span></label>\n            <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" [(ngModel)]=\"model.email\" #email=\"ngModel\" required pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\">\n            <div class=\"help-block\" *ngIf=\"contact.submitted && !email.valid || !email.untouched\">\n              <div  *ngIf=\"email.errors && email.errors.required\">\n                Email is required\n              </div>\n              <div  *ngIf=\"email.errors && email.errors.pattern\">\n                Email is invalid\n              </div>\n            </div>\n          </div>\n\n          <div class=\"form-group\" [ngClass]=\"{'has-error': contact.submitted && !message.valid }\">\n            <label for=\"message\" class=\"control-label\">Message: <span class=\"required\">*</span></label>\n            <textarea class=\"form-control\" rows=\"3\" id=\"message\" name=\"message\" [(ngModel)]=\"model.message\" #message=\"ngModel\" required></textarea>\n            <div *ngIf=\"contact.submitted && !message.valid\" class=\"help-block\">Message is required</div>\n          </div>\n\n          <div class=\"form-group\">\n            <button class=\"btn btn-primary\">Send message</button>\n          </div>\n\n        </form>\n\n      </div>\n    </div>\n\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -388,8 +435,9 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-sm-12\">\n\n    <div c
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_mailer_mailer_service__ = __webpack_require__("../../../../../src/app/services/mailer/mailer.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_alert_alert_service__ = __webpack_require__("../../../../../src/app/services/alert/alert.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -404,21 +452,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ContactComponent = (function () {
-    function ContactComponent(mailer) {
+    function ContactComponent(mailer, alert) {
         this.mailer = mailer;
+        this.alert = alert;
         this.model = {};
     }
     ContactComponent.prototype.ngOnInit = function () { };
-    ContactComponent.prototype.send = function () {
+    ContactComponent.prototype.send = function (form) {
+        var _this = this;
         this.mailer.sendMail(this.model).subscribe(function (data) {
-            console.log(data);
+            // success status and error
+            if (data.status === 200) {
+                _this.alert.success(data.status_message, true);
+                form.resetForm();
+            }
+            else if (data.status === 400) {
+                _this.alert.error(data.status_message, true);
+            }
+        }, function (error) {
+            var msg = JSON.parse(error._body).message;
+            _this.alert.error(msg);
         });
     };
     return ContactComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* HostBinding */])('@pageAnimation'),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* HostBinding */])('@pageAnimation'),
     __metadata("design:type", Object)
 ], ContactComponent.prototype, "model", void 0);
 ContactComponent = __decorate([
@@ -457,10 +518,10 @@ ContactComponent = __decorate([
             ])
         ]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_mailer_mailer_service__["a" /* MailerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_mailer_mailer_service__["a" /* MailerService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_mailer_mailer_service__["a" /* MailerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_mailer_mailer_service__["a" /* MailerService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_alert_alert_service__["a" /* AlertService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_alert_alert_service__["a" /* AlertService */]) === "function" && _b || Object])
 ], ContactComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=contact.component.js.map
 
 /***/ }),
@@ -516,7 +577,7 @@ var DefaultComponent = (function () {
     return DefaultComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* HostBinding */])('@pageAnimation'),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* HostBinding */])('@pageAnimation'),
     __metadata("design:type", Object)
 ], DefaultComponent.prototype, "title", void 0);
 DefaultComponent = __decorate([
@@ -625,7 +686,7 @@ var HomeComponent = (function () {
     return HomeComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* HostBinding */])('@pageAnimation'),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* HostBinding */])('@pageAnimation'),
     __metadata("design:type", Object)
 ], HomeComponent.prototype, "animatePage", void 0);
 HomeComponent = __decorate([
@@ -742,7 +803,7 @@ NavigationComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/navigation/navigation.component.html"),
         styles: [__webpack_require__("../../../../../src/app/navigation/navigation.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
 ], NavigationComponent);
 
 var _a;
@@ -792,7 +853,7 @@ var ProjectDetailComponent = (function () {
     return ProjectDetailComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* HostBinding */])('@pageAnimation'),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* HostBinding */])('@pageAnimation'),
     __metadata("design:type", Number)
 ], ProjectDetailComponent.prototype, "uid", void 0);
 ProjectDetailComponent = __decorate([
@@ -855,7 +916,7 @@ ProjectDetailComponent = __decorate([
             ])
         ]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_projects_service__["a" /* ProjectsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_projects_service__["a" /* ProjectsService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_projects_service__["a" /* ProjectsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_projects_service__["a" /* ProjectsService */]) === "function" && _c || Object])
 ], ProjectDetailComponent);
 
 var _a, _b, _c;
@@ -893,7 +954,7 @@ var ProjectsComponent = (function () {
     return ProjectsComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Input */])(),
     __metadata("design:type", Object)
 ], ProjectsComponent.prototype, "project", void 0);
 ProjectsComponent = __decorate([
@@ -908,12 +969,79 @@ ProjectsComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/services/alert/alert.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AlertService = (function () {
+    function AlertService(router) {
+        var _this = this;
+        this.router = router;
+        this.subject = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
+        this.keepAfterNavigationChange = false;
+        // Clear alert message on route change
+        router.events.subscribe(function (event) {
+            if (event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* NavigationStart */]) {
+                if (_this.keepAfterNavigationChange) {
+                    // only keep for a single location change
+                    _this.keepAfterNavigationChange = false;
+                }
+                else {
+                    // clear alert
+                    _this.subject.next();
+                }
+            }
+        });
+    }
+    AlertService.prototype.success = function (message, keepAfterNavigationChange) {
+        if (keepAfterNavigationChange === void 0) { keepAfterNavigationChange = false; }
+        this.keepAfterNavigationChange = keepAfterNavigationChange;
+        this.subject.next({ type: 'success', text: message });
+    };
+    AlertService.prototype.error = function (message, keepAfterNavigationChange) {
+        if (keepAfterNavigationChange === void 0) { keepAfterNavigationChange = false; }
+        this.keepAfterNavigationChange = keepAfterNavigationChange;
+        this.subject.next({ type: 'error', text: message });
+    };
+    AlertService.prototype.getMessage = function () {
+        return this.subject.asObservable();
+    };
+    return AlertService;
+}());
+AlertService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
+], AlertService);
+
+var _a;
+//# sourceMappingURL=alert.service.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/services/mailer/mailer.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MailerService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -926,10 +1054,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var MailerService = (function () {
     function MailerService(http) {
         this.http = http;
-        this.api = 'http://mail.loc';
+        this.api = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].mailApi;
+        // 'http://mail.loc';
+        // this.api = '/PHPMailer/index.php';
+        console.log(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */]);
     }
     MailerService.prototype.sendMail = function (data) {
         var body = new URLSearchParams(data);
@@ -1193,14 +1325,10 @@ var projects = [
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
-// The file contents for the current environment will overwrite these during build.
-// The build system defaults to the dev environment which uses `environment.ts`, but if you do
-// `ng build --env=prod` then `environment.prod.ts` will be used instead.
-// The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: false,
-    title: 'dexDev'
+    production: true,
+    title: 'dexDev',
+    mailApi: '/PHPMailer/index.php'
 };
 //# sourceMappingURL=environment.js.map
 
