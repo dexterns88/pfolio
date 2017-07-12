@@ -34,6 +34,15 @@
   box-sizing: border-box;
 }
 
+// Prevent animation footer enter into content
+.ng-trigger-pageAnimation {
+  clear: none;
+  float: left;
+  margin-left: 0;
+  margin-right: -100%;
+  width: 100%;
+}
+
 /*
 | Layout
 ========================= */

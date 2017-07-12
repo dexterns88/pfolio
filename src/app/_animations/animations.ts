@@ -9,12 +9,13 @@ function routeAnim() {
 
     // router navigation is here global
     transition('* => *', [
-      query(':leave', style({
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0
-      }), {optional: true}),
+      // query(':enter', style({
+      //   // position: 'relative',
+      //   // position: 'absolute',
+      //   // top: 0,
+      //   // left: 0,
+      //   // right: 0
+      // }), {optional: true}),
 
       query(':leave', group([
         animateChild()

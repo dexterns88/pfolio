@@ -27,12 +27,13 @@ function routeAnim() {
     return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["i" /* trigger */])('routerAnimations', [
         // router navigation is here global
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* transition */])('* => *', [
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* query */])(':leave', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["h" /* style */])({
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0
-            }), { optional: true }),
+            // query(':enter', style({
+            //   // position: 'relative',
+            //   // position: 'absolute',
+            //   // top: 0,
+            //   // left: 0,
+            //   // right: 0
+            // }), {optional: true}),
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* query */])(':leave', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["n" /* group */])([
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["o" /* animateChild */])()
             ]), { optional: true }),
