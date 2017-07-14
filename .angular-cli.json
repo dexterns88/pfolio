@@ -21,6 +21,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/prismjs/themes/prism-okaidia.css",
         "assets/css/screen.css"
       ],
       "scripts": [

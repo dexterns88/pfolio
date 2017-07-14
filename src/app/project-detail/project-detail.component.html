@@ -6,6 +6,7 @@
         {{ project.title }}
       </a>
     </h1>
+    <p class="sub-title">{{ project.titleDesc }}</p>
 
     <div class="bs-callout bs-callout-info">
 
@@ -16,11 +17,12 @@
 
         <div class="col-sm-8">
 
-          <div [innerHTML]="project.description"></div>
+          <markdown-to-html class="description" *ngIf="project.content" [src]="'/assets/projects-md/' + project.content"></markdown-to-html>
 
           <p class="project-link">
             <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-            <a target="_blank" href="{{ project.link }}">{{ project.link }}</a>
+            <a *ngIf="project.link; else nolink" target="_blank" href="{{ project.link }}">{{ project.link }}</a>
+            <ng-template #nolink>{{ project.linkTekst }}</ng-template>
           </p>
 
           <div class="technology">

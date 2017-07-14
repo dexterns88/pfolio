@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 
 import { AppRouting } from './app.routing';
 
@@ -42,7 +43,8 @@ import { AlertComponent } from './alert/alert.component';
     BrowserAnimationsModule,
     AppRouting,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MarkdownToHtmlModule.forRoot()
   ],
   providers: [
     ProjectsService,
