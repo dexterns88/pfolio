@@ -647,7 +647,7 @@ DefaultComponent = __decorate([
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"content\">\n\n  <h1 class=\"page-title\">Project's I worked on</h1>\n\n  <div class=\"row\">\n    <app-projects\n      class=\"projects\"\n      *ngFor=\"let project of projects;trackBy: project?.title\"\n      [project]=\"project\">\n    </app-projects>\n\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"content\">\n\n  <h1 class=\"page-title\">Project's I worked on</h1>\n\n  <div class=\"row\">\n    <app-projects\n      class=\"projects\"\n      *ngFor=\"let project of projects;trackBy: project?.title\"\n      [project]=\"project\">\n    </app-projects>\n\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -694,6 +694,7 @@ HomeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-home',
         template: __webpack_require__("../../../../../src/app/home/home.component.html"),
+        // styleUrls: ['home.component.css'],
         animations: [
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* trigger */])('pageAnimation', [
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':enter', [
@@ -815,7 +816,7 @@ var _a;
 /***/ "../../../../../src/app/project-detail/project-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"row project-detail\">\n  <div class=\"col-sm-12\">\n\n    <h1 class=\"project-title\">\n      <a target=\"_blank\" href=\"{{ project.link }}\">\n        {{ project.title }}\n      </a>\n    </h1>\n\n    <div class=\"bs-callout bs-callout-info\">\n\n      <div class=\"row\">\n        <div *ngIf=\"project.images\" class=\"col-sm-4\">\n          <img class=\"media-object\" src=\"/assets/images/projects/{{project.images[0]}}\" alt=\"sea\" />\n        </div>\n\n        <div class=\"col-sm-8\">\n\n          <div [innerHTML]=\"project.description\"></div>\n\n          <p class=\"project-link\">\n            <span class=\"glyphicon glyphicon-link\" aria-hidden=\"true\"></span>\n            <a target=\"_blank\" href=\"{{ project.link }}\">{{ project.link }}</a>\n          </p>\n\n          <div class=\"technology\">\n            <span>Technology: </span>\n            <span *ngFor=\"let teach of project.teach\" class=\"label label-primary\">{{ teach }}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div *ngIf=\"project.images && project.images.length > 1\" class=\"well images\">\n      <div class=\"row\">\n        <div *ngFor=\"let image of project.images\" class=\"col-sm-4\">\n          <img src=\"/assets/images/projects/{{ image }}\" alt=\"sss\" />\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n</section>"
+module.exports = "<section class=\"row project-detail\">\n  <div class=\"col-sm-12\">\n\n    <h1 class=\"project-title\">\n      <a target=\"_blank\" href=\"{{ project.link }}\">\n        {{ project.title }}\n      </a>\n    </h1>\n\n    <div class=\"bs-callout bs-callout-info\">\n\n      <div class=\"row\">\n        <div *ngIf=\"project.images\" class=\"col-sm-4\">\n          <img class=\"media-object\" src=\"/assets/images/projects/{{project.images[0]}}\" alt=\"sea\" />\n        </div>\n\n        <div class=\"col-sm-8\">\n\n          <div [innerHTML]=\"project.description\"></div>\n\n          <p class=\"project-link\">\n            <span class=\"glyphicon glyphicon-link\" aria-hidden=\"true\"></span>\n            <a target=\"_blank\" href=\"{{ project.link }}\">{{ project.link }}</a>\n          </p>\n\n          <div class=\"technology\">\n            <span>Technology: </span>\n            <span *ngFor=\"let teach of project.teach\" class=\"label label-primary\">{{ teach }}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div *ngIf=\"project.images && project.images.length > 1\" class=\"well images\">\n      <div class=\"row\">\n        <a *ngFor=\"let image of project.images\" class=\"col-sm-4\" href=\"/assets/images/projects/{{ image }}\">\n          <img src=\"/assets/images/projects/{{ image }}\" alt=\"{{ image }}\" />\n        </a>\n      </div>\n    </div>\n\n  </div>\n\n</section>"
 
 /***/ }),
 
@@ -850,6 +851,30 @@ var ProjectDetailComponent = (function () {
     ProjectDetailComponent.prototype.ngOnInit = function () {
         this.uid = +this.route.snapshot.params['id'];
         this.project = this.projectS.getItem(this.uid);
+    };
+    ProjectDetailComponent.prototype.ngAfterViewInit = function () {
+        $('.well.images').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: { enabled: true },
+            mainClass: 'mfp-with-zoom',
+            zoom: {
+                enabled: true,
+                duration: 300,
+                easing: 'ease-in-out',
+                // The "opener" function should return the element from which popup will be zoomed in
+                // and to which popup will be scaled down
+                // By defailt it looks for an image tag:
+                opener: function (openerElement) {
+                    // openerElement is the element on which popup was initialized, in this case its <a> tag
+                    // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+                    return openerElement.is('img') ? openerElement : openerElement.find('img');
+                }
+            }
+        });
+        // $(document).ready(function(){
+        //   $('p').css('backgroundColor', 'red');
+        // });
     };
     return ProjectDetailComponent;
 }());
@@ -1323,10 +1348,15 @@ var projects = [
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `.angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: true,
+    production: false,
     title: 'dexDev',
-    mailApi: '/PHPMailer/index.php'
+    mailApi: 'http://mail.loc'
 };
 //# sourceMappingURL=environment.js.map
 
@@ -1353,7 +1383,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("../../../../../src/main.ts");
@@ -1361,5 +1391,5 @@ module.exports = __webpack_require__("../../../../../src/main.ts");
 
 /***/ })
 
-},[0]);
+},[1]);
 //# sourceMappingURL=main.bundle.js.map

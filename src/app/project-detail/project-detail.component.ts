@@ -1,9 +1,9 @@
-import {Component, HostBinding, OnInit} from '@angular/core';
+import {Component, HostBinding, OnInit, AfterViewInit} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
 import {query, stagger, animate, style, transition, trigger, group} from '@angular/animations';
-
 import { ProjectsService } from '../services/projects.service';
+
+declare const $: any;
 
 @Component({
   moduleId: module.id,
@@ -69,7 +69,7 @@ import { ProjectsService } from '../services/projects.service';
     ])
   ]
 })
-export class ProjectDetailComponent implements OnInit {
+export class ProjectDetailComponent implements OnInit, AfterViewInit {
   @HostBinding('@pageAnimation')
   private uid: number;
   public project;
@@ -83,5 +83,33 @@ export class ProjectDetailComponent implements OnInit {
   ngOnInit() {
     this.uid = +this.route.snapshot.params['id'];
     this.project = this.projectS.getItem(this.uid);
+  }
+
+  ngAfterViewInit() {
+
+    $('.well.images').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: { enabled: true },
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function(openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      }
+
+    });
+
+    // $(document).ready(function(){
+    //   $('p').css('backgroundColor', 'red');
+    // });
   }
 }

@@ -19,11 +19,12 @@
 @import '../../node_modules/breakpoint-sass/stylesheets/breakpoint.scss';
 @import '../../node_modules/font-awesome/scss/font-awesome.scss';
 
+// magnific load
+@import '../../node_modules/magnific-popup/src/css/main.scss';
+
 @import 'variables.scss';
 @import 'mixins';
 @import 'debug';
-
-
 
 // source setup theme
 :root {
@@ -319,6 +320,23 @@ $border-technology: #e5e5e5;
     &:not(:hover) {
       color: #727272;
       transition: all 2.2s ease 1s;
+    }
+  }
+}
+
+.projects {
+
+  .thumbnail {
+
+    a {
+      display: block;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        transition: background-color 0.2s ease;
+        background-color: #F8F8F8;
+      }
     }
   }
 }

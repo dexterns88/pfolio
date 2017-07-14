@@ -33,9 +33,9 @@
 
     <div *ngIf="project.images && project.images.length > 1" class="well images">
       <div class="row">
-        <div *ngFor="let image of project.images" class="col-sm-4">
-          <img src="/assets/images/projects/{{ image }}" alt="sss" />
-        </div>
+        <a *ngFor="let image of project.images" class="col-sm-4" href="/assets/images/projects/{{ image }}">
+          <img src="/assets/images/projects/{{ image }}" alt="{{ image }}" />
+        </a>
       </div>
     </div>
 

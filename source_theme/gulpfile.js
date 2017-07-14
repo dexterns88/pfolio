@@ -19,10 +19,14 @@ var gulp = require('gulp'),
     ],
     jsfiles = [
       'node_modules/web-animations-js/web-animations.min.js',
+      'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
       'source/js/app.js'
     ],
     scssfiles = [
       'source/scss/*.scss'
+    ],
+    images = [
+
     ],
     fonts = [
       'node_modules/font-awesome/fonts/*'
@@ -33,11 +37,17 @@ var dest = [];
 dest['css'] = '../src/assets/css';
 dest['js'] = '../src/assets/js';
 dest['fonts'] = '../src/assets/fonts';
+dest['images'] = '../src/assets/img';
 
 //FA FONTS
 gulp.task('fonts', function() {
   return gulp.src(fonts)
     .pipe(gulp.dest(dest['fonts']));
+});
+
+gulp.task('image', function() {
+  return gulp.src(images)
+    .pipe(gulp.dest(dest['images']));
 });
 
 //CSS
