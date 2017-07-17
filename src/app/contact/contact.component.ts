@@ -14,21 +14,21 @@ import 'rxjs/Rx';
       transition(':enter', [
         query('.panel, .contact-head', style({
           transform: 'scale(0)'
-        })),
+        }), {optional: true} ),
         query('.panel .form-group', style({
           transform: 'translateX(100vw)'
-        })),
+        }), {optional: true}),
 
         query('.panel, .contact-head', [
           stagger(250, [
             animate('600ms cubic-bezier(0.35,0,.25,1)', style('*'))
           ])
-        ]),
+        ], {optional: true}),
         query('.panel .form-group', [
           stagger(250, [
             animate('300ms cubic-bezier(0.35,0,.25,1)', style('*'))
           ])
-        ])
+        ], {optional: true})
       ]),
       transition(':leave', [
         query('.panel, .contact-head', [
@@ -37,7 +37,7 @@ import 'rxjs/Rx';
               transform: 'scale(0)'
             }))
           ])
-        ])
+        ], {optional: true})
       ])
     ])
   ]

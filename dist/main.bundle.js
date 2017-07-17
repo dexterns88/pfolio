@@ -495,20 +495,20 @@ ContactComponent = __decorate([
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':enter', [
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel, .contact-head', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
                         transform: 'scale(0)'
-                    })),
+                    }), { optional: true }),
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel .form-group', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
                         transform: 'translateX(100vw)'
-                    })),
+                    }), { optional: true }),
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel, .contact-head', [
                         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(250, [
                             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('600ms cubic-bezier(0.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])('*'))
                         ])
-                    ]),
+                    ], { optional: true }),
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel .form-group', [
                         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* stagger */])(250, [
                             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["m" /* animate */])('300ms cubic-bezier(0.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])('*'))
                         ])
-                    ])
+                    ], { optional: true })
                 ]),
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])(':leave', [
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* query */])('.panel, .contact-head', [
@@ -517,7 +517,7 @@ ContactComponent = __decorate([
                                 transform: 'scale(0)'
                             }))
                         ])
-                    ])
+                    ], { optional: true })
                 ])
             ])
         ]
