@@ -53,6 +53,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   font-family: 'Open Sans', sans-serif;
+  min-width: 320px;
 }
 
 /*
@@ -86,6 +87,23 @@ img {
 
 .navbar-brand {
   font-family: 'Indie Flower', cursive;
+}
+
+.social-nav {
+
+  @include breakpoint($upto-m) {
+    padding: 5px 0;
+  }
+
+  li {
+    float: left;
+
+    a {
+      @include breakpoint($upto-m) {
+        margin: 0;
+      }
+    }
+  }
 }
 
 /*
@@ -341,7 +359,16 @@ $border-technology: #e5e5e5;
   }
 }
 
-.project-detail .description {
-  margin-bottom: 20px;
-  display: block;
+.project-detail {
+
+  .description {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .images a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+  }
 }

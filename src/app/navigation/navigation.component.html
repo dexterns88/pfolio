@@ -1,6 +1,13 @@
-
+<!-- main navigation -->
 <ul class="nav navbar-nav navbar-right">
+  <li *ngFor="let router of routers" routerLinkActive="active">
+    <a routerLink="/{{router.path}}">{{router.data.navName}}</a>
+  </li>
+</ul>
 
+
+<!-- Social link navigation -->
+<ul class="nav navbar-nav navbar-right social-nav">
   <li>
     <a class="soc tw" target="_blank" href="https://twitter.com/Dexter_ns88"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
   </li>
@@ -10,9 +17,4 @@
   <li>
     <a class="soc ln" target="_blank" href="https://www.linkedin.com/in/dexterns88"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
   </li>
-
-  <li *ngFor="let router of routers" routerLinkActive="active">
-    <a routerLink="/{{router.path}}">{{router.data.navName}}</a>
-  </li>
-
 </ul>

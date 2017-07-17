@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     gp_uglify = require('gulp-uglify'),
     gp_filter = require('gulp-filter'),
     gp_header = require('gulp-header'),
+    imageResize = require('gulp-image-resize'),
     processors = [
       autoprefixer({
         browsers: ['last 5 versions', 'IE 9', 'IE 10'],
@@ -48,6 +49,36 @@ gulp.task('fonts', function() {
 gulp.task('image', function() {
   return gulp.src(images)
     .pipe(gulp.dest(dest['images']));
+});
+
+var imgProjects = [
+  '../src/assets/images/projects/**/*.png'
+];
+
+gulp.task('cache', ['imgc-thumb', 'imgcSmall']);
+
+// Image resize task
+gulp.task('imgc-thumb', function() {
+
+  gulp.src(imgProjects)
+    .pipe(imageResize({
+      width: 730,
+      height: 410,
+      crop: false,
+      imageMagick: true
+    }))
+    .pipe(gulp.dest('../src/assets/images-ch/thumb'));
+});
+
+gulp.task('imgcSmall', function() {
+  gulp.src(imgProjects)
+    .pipe(imageResize({
+      width: 730,
+      height: 410,
+      crop: true,
+      imageMagick: true
+    }))
+    .pipe(gulp.dest('../src/assets/images-ch/small'));
 });
 
 //CSS
