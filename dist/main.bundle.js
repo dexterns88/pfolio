@@ -819,7 +819,7 @@ var _a;
 /***/ "../../../../../src/app/project-detail/project-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"row project-detail\">\n  <div class=\"col-sm-12\">\n\n    <h1 class=\"project-title\">\n      <a target=\"_blank\" href=\"{{ project.link }}\">\n        {{ project.title }}\n      </a>\n    </h1>\n    <p class=\"sub-title\">{{ project.titleDesc }}</p>\n\n    <div class=\"bs-callout bs-callout-info\">\n\n      <div class=\"row\">\n        <div *ngIf=\"project.images\" class=\"col-sm-4\">\n          <img class=\"media-object\" src=\"/assets/images/projects/{{project.images[0]}}\" alt=\"sea\" />\n        </div>\n\n        <div class=\"col-sm-8\">\n\n          <markdown-to-html class=\"description\" *ngIf=\"project.content\" [src]=\"'/assets/projects-md/' + project.content\"></markdown-to-html>\n\n          <p class=\"project-link\">\n            <span class=\"glyphicon glyphicon-link\" aria-hidden=\"true\"></span>\n            <a *ngIf=\"project.link; else nolink\" target=\"_blank\" href=\"{{ project.link }}\">{{ project.link }}</a>\n            <ng-template #nolink>{{ project.linkTekst }}</ng-template>\n          </p>\n\n          <div class=\"technology\">\n            <span>Technology: </span>\n            <span *ngFor=\"let teach of project.teach\" class=\"label label-primary\">{{ teach }}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div *ngIf=\"project.images && project.images.length > 1\" class=\"well images\">\n      <div class=\"row\">\n        <a *ngFor=\"let image of project.images\" class=\"col-md-4\" href=\"/assets/images/projects/{{ image }}\">\n          <picture>\n            <img src=\"/assets/images-ch/small/{{ image }}\" alt=\"{{ image }}\" />\n          </picture>\n        </a>\n      </div>\n    </div>\n\n  </div>\n\n</section>"
+module.exports = "<section class=\"row project-detail\">\n  <div class=\"col-sm-12\">\n\n    <h1 class=\"project-title\">\n      <a target=\"_blank\" href=\"{{ project.link }}\">\n        {{ project.title }}\n      </a>\n    </h1>\n    <p class=\"sub-title\">{{ project.titleDesc }}</p>\n\n    <div class=\"bs-callout bs-callout-info\">\n\n      <div class=\"row\">\n        <div *ngIf=\"project.images\" class=\"col-sm-4\">\n          <img class=\"media-object\" src=\"/assets/images-ch/thumb/{{project.images[0]}}\" alt=\"sea\" />\n        </div>\n\n        <div class=\"col-sm-8\">\n\n          <markdown-to-html class=\"description\" *ngIf=\"project.content\" [src]=\"'/assets/projects-md/' + project.content\"></markdown-to-html>\n\n          <p class=\"project-link\">\n            <span class=\"glyphicon glyphicon-link\" aria-hidden=\"true\"></span>\n            <a *ngIf=\"project.link; else nolink\" target=\"_blank\" href=\"{{ project.link }}\">{{ project.link }}</a>\n            <ng-template #nolink>{{ project.linkTekst }}</ng-template>\n          </p>\n\n          <div class=\"technology\">\n            <span>Technology: </span>\n            <span *ngFor=\"let teach of project.teach\" class=\"label label-primary\">{{ teach }}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div *ngIf=\"project.images && project.images.length > 1\" class=\"well images\">\n      <div class=\"row\">\n        <a *ngFor=\"let image of project.images\" class=\"col-md-4\" href=\"/assets/images/projects/{{ image }}\">\n          <picture>\n            <img src=\"/assets/images-ch/small/{{ image }}\" alt=\"{{ image }}\" />\n          </picture>\n        </a>\n      </div>\n    </div>\n\n  </div>\n\n</section>"
 
 /***/ }),
 
@@ -1290,6 +1290,19 @@ TechnologyComponent = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return projects; });
 var projects = [
     {
+        title: 'Izmisljene price',
+        titleDesc: 'Storyteller non profit organization',
+        content: 'price.md',
+        teach: [
+            'Php', 'Drupal', 'CSS ( gulp, sass )', 'Responsive', 'jQuery'
+        ],
+        link: 'http://izmisljeneprice.com',
+        images: [
+            'price/price1.png',
+            'price/price2.png'
+        ]
+    },
+    {
         title: 'Heawen water',
         titleDesc: 'Company website for presentation',
         content: 'heaven.md',
@@ -1344,15 +1357,10 @@ var projects = [
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
-// The file contents for the current environment will overwrite these during build.
-// The build system defaults to the dev environment which uses `environment.ts`, but if you do
-// `ng build --env=prod` then `environment.prod.ts` will be used instead.
-// The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: false,
+    production: true,
     title: 'dexDev',
-    mailApi: 'http://mail.loc'
+    mailApi: '/PHPMailer/index.php'
 };
 //# sourceMappingURL=environment.js.map
 
