@@ -1,5 +1,18 @@
 export const projects = [
   {
+    title: 'Izmisljene price',
+    titleDesc: 'Storyteller non profit organization',
+    content: 'price.md',
+    teach: [
+      'Php', 'Drupal', 'CSS ( gulp, sass )', 'Responsive', 'jQuery'
+    ],
+    link: 'http://izmisljeneprice.com',
+    images: [
+      'price/price1.png',
+      'price/price2.png'
+    ]
+  },
+  {
     title: 'Heawen water',
     titleDesc: 'Company website for presentation',
     content: 'heaven.md',

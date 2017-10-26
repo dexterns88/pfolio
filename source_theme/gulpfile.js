@@ -55,7 +55,6 @@ var imgProjects = [
   '../src/assets/images/projects/**/*.png'
 ];
 
-gulp.task('cache', ['imgc-thumb', 'imgcSmall']);
 
 // Image resize task
 gulp.task('imgc-thumb', function() {
@@ -142,3 +141,4 @@ gulp.task('w', function() {
 
 //DEFAULT
 gulp.task('default', ['styles_prod', 'scripts_prod']);
+gulp.task('cache', ['imgc-thumb', 'imgcSmall']);
