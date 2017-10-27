@@ -50,8 +50,8 @@
 body {
   margin: 0;
   font-size: 1.6rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
   font-family: 'Open Sans', sans-serif;
   min-width: 320px;
 }
@@ -65,9 +65,9 @@ html,body {
 }
 
 body {
-  display: table;
-  height: 100%;
-  width: 100%;
+  //display: table;
+  //height: 100%;
+  //width: 100%;
 }
 
 img {
@@ -77,12 +77,12 @@ img {
 
 .page,
 .footer-sticked {
-  display: table-row;
-  height: auto;
+  //display: table-row;
+  //height: auto;
 }
 
 .footer-sticked {
-  height: 1px;
+  //height: 1px;
 }
 
 .navbar-brand {
@@ -112,6 +112,7 @@ img {
   background-repeat: no-repeat;
   background-size: auto 70%;
   background-attachment: fixed;
+  min-height: 80vh;
 }
 
 /*
@@ -336,7 +337,7 @@ $border-technology: #e5e5e5;
     padding: 0 10px;
     display: inline-block;
     vertical-align: middle;
-    font-size: 4.4rem;
+    font-size: 3.0rem;
   }
 
   .label {
