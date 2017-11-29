@@ -10,8 +10,7 @@
       "assets": [
         "assets",
         "favicon.ico",
-        ".htaccess",
-        "PHPMailer"
+        ".htaccess"
       ],
       "index": "index.html",
       "main": "main.ts",
