@@ -186,7 +186,7 @@ var _a;
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The whole content below can be removed with the new code.-->\n<div class=\"page\">\n\n  <header>\n    <nav class=\"navbar navbar-default\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" routerLink=\"/about\">DexDev</a>\n        </div>\n\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n          <!-- call navigation element -->\n          <app-navigation></app-navigation>\n        </div>\n\n      </div>\n    </nav>\n  </header>\n\n  <div class=\"container main-container\">\n\n    <app-alert></app-alert>\n\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n\n        <div style=\"position:relative;\">\n          <div class=\"page-animation\" [@routerAnimations]=\"prepareRouteTransition(outlet)\">\n            <router-outlet #outlet=\"outlet\"></router-outlet>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n  </div>\n</div>\n\n<div class=\"footer-sticked\">\n  <footer class=\"footer\">\n    <!--<div class=\"container\">-->\n      <app-technology></app-technology>\n    <!--</div>-->\n  </footer>\n</div>"
+module.exports = "<!--The whole content below can be removed with the new code.-->\n<div class=\"page\">\n\n  <header>\n    <nav class=\"navbar navbar-default\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" routerLink=\"/project\">DexDev</a>\n        </div>\n\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n          <!-- call navigation element -->\n          <app-navigation></app-navigation>\n        </div>\n\n      </div>\n    </nav>\n  </header>\n\n  <div class=\"container main-container\">\n\n    <app-alert></app-alert>\n\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n\n        <div style=\"position:relative;\">\n          <div class=\"page-animation\" [@routerAnimations]=\"prepareRouteTransition(outlet)\">\n            <router-outlet #outlet=\"outlet\"></router-outlet>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n  </div>\n</div>\n\n<div class=\"footer-sticked\">\n  <footer class=\"footer\">\n    <!--<div class=\"container\">-->\n      <app-technology></app-technology>\n    <!--</div>-->\n  </footer>\n</div>"
 
 /***/ }),
 
@@ -327,10 +327,9 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_about_component__ = __webpack_require__("../../../../../src/app/about/about.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__default_default_component__ = __webpack_require__("../../../../../src/app/default/default.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__ = __webpack_require__("../../../../../src/app/contact/contact.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__project_detail_project_detail_component__ = __webpack_require__("../../../../../src/app/project-detail/project-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__default_default_component__ = __webpack_require__("../../../../../src/app/default/default.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__contact_contact_component__ = __webpack_require__("../../../../../src/app/contact/contact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__project_detail_project_detail_component__ = __webpack_require__("../../../../../src/app/project-detail/project-detail.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRouting; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -341,7 +340,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 // Import component for routing
-
 
 
 
@@ -365,27 +363,27 @@ var appRoutes = [
     },
     {
         path: 'project/:id',
-        component: __WEBPACK_IMPORTED_MODULE_6__project_detail_project_detail_component__["a" /* ProjectDetailComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_5__project_detail_project_detail_component__["a" /* ProjectDetailComponent */],
         data: {
             animation: {
                 value: 'projectDetail'
             }
         }
     },
-    {
-        path: 'about',
-        component: __WEBPACK_IMPORTED_MODULE_3__about_about_component__["a" /* AboutComponent */],
-        data: {
-            animation: {
-                value: 'about'
-            },
-            type: 'main-nav',
-            navName: 'about'
-        }
-    },
+    // {
+    //   path: 'about',
+    //   component: AboutComponent,
+    //   data: {
+    //     animation: {
+    //       value: 'about'
+    //     },
+    //     type: 'main-nav',
+    //     navName: 'about'
+    //   }
+    // },
     {
         path: 'contact',
-        component: __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__["a" /* ContactComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_4__contact_contact_component__["a" /* ContactComponent */],
         data: {
             animation: {
                 value: 'contact'
@@ -396,7 +394,7 @@ var appRoutes = [
     },
     {
         path: '**',
-        component: __WEBPACK_IMPORTED_MODULE_4__default_default_component__["a" /* DefaultComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_3__default_default_component__["a" /* DefaultComponent */],
         data: {
             animation: {
                 value: 'default'
@@ -1294,7 +1292,7 @@ var projects = [
         titleDesc: 'Storyteller non profit organization',
         content: 'price.md',
         teach: [
-            'Php', 'Drupal', 'CSS ( gulp, sass )', 'Responsive', 'jQuery'
+            'Drupal', 'CSS ( gulp, sass )', 'Responsive', 'jQuery'
         ],
         link: 'http://izmisljeneprice.com',
         images: [

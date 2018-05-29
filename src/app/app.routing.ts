@@ -34,17 +34,17 @@ const appRoutes: Routes = [
       }
     }
   },
-  {
-    path: 'about',
-    component: AboutComponent,
-    data: {
-      animation: {
-        value: 'about'
-      },
-      type: 'main-nav',
-      navName: 'about'
-    }
-  },
+  // {
+  //   path: 'about',
+  //   component: AboutComponent,
+  //   data: {
+  //     animation: {
+  //       value: 'about'
+  //     },
+  //     type: 'main-nav',
+  //     navName: 'about'
+  //   }
+  // },
   {
     path: 'contact',
     component: ContactComponent,

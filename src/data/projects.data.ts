@@ -4,7 +4,7 @@ export const projects = [
     titleDesc: 'Storyteller non profit organization',
     content: 'price.md',
     teach: [
-      'Php', 'Drupal', 'CSS ( gulp, sass )', 'Responsive', 'jQuery'
+      'Drupal', 'CSS ( gulp, sass )', 'Responsive', 'jQuery'
     ],
     link: 'http://izmisljeneprice.com',
     images: [
