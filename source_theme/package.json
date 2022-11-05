@@ -10,7 +10,7 @@
     "coffee-script": "~1.12.6",
     "doiuse": "^3.0.0",
     "font-awesome": "^4.6.3",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.0",
     "gulp-filter": "^5.0.0",
     "gulp-header": "^1.8.8",
